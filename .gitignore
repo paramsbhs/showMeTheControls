@@ -1,0 +1,37 @@
+# CMake
+build/
+*.cmake
+CMakeCache.txt
+CMakeFiles/
+compile_commands.json
+Makefile
+cmake_install.cmake
+
+# Dependencies
+external/glfw/build/
+external/imgui/.git/
+external/implot/.git/
+external/eigen/.git/
+
+# IDEs
+.vscode/
+.zed/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Binaries
+*.exe
+*.dll
+*.so
+controllab
+
+# Logs
+*.log
+
+# Temp
+*.tmp
