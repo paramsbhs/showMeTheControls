@@ -83,14 +83,142 @@ CMakeFiles/controllab.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/controllab.dir/src/main.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/param/showMeTheControls/src/main.cpp -o CMakeFiles/controllab.dir/src/main.cpp.s
 
+CMakeFiles/controllab.dir/src/app.cpp.o: CMakeFiles/controllab.dir/flags.make
+CMakeFiles/controllab.dir/src/app.cpp.o: /home/param/showMeTheControls/src/app.cpp
+CMakeFiles/controllab.dir/src/app.cpp.o: CMakeFiles/controllab.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/param/showMeTheControls/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/controllab.dir/src/app.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/controllab.dir/src/app.cpp.o -MF CMakeFiles/controllab.dir/src/app.cpp.o.d -o CMakeFiles/controllab.dir/src/app.cpp.o -c /home/param/showMeTheControls/src/app.cpp
+
+CMakeFiles/controllab.dir/src/app.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/controllab.dir/src/app.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/param/showMeTheControls/src/app.cpp > CMakeFiles/controllab.dir/src/app.cpp.i
+
+CMakeFiles/controllab.dir/src/app.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/controllab.dir/src/app.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/param/showMeTheControls/src/app.cpp -o CMakeFiles/controllab.dir/src/app.cpp.s
+
+CMakeFiles/controllab.dir/src/control/pid.cpp.o: CMakeFiles/controllab.dir/flags.make
+CMakeFiles/controllab.dir/src/control/pid.cpp.o: /home/param/showMeTheControls/src/control/pid.cpp
+CMakeFiles/controllab.dir/src/control/pid.cpp.o: CMakeFiles/controllab.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/param/showMeTheControls/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/controllab.dir/src/control/pid.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/controllab.dir/src/control/pid.cpp.o -MF CMakeFiles/controllab.dir/src/control/pid.cpp.o.d -o CMakeFiles/controllab.dir/src/control/pid.cpp.o -c /home/param/showMeTheControls/src/control/pid.cpp
+
+CMakeFiles/controllab.dir/src/control/pid.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/controllab.dir/src/control/pid.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/param/showMeTheControls/src/control/pid.cpp > CMakeFiles/controllab.dir/src/control/pid.cpp.i
+
+CMakeFiles/controllab.dir/src/control/pid.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/controllab.dir/src/control/pid.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/param/showMeTheControls/src/control/pid.cpp -o CMakeFiles/controllab.dir/src/control/pid.cpp.s
+
+CMakeFiles/controllab.dir/src/control/state_space.cpp.o: CMakeFiles/controllab.dir/flags.make
+CMakeFiles/controllab.dir/src/control/state_space.cpp.o: /home/param/showMeTheControls/src/control/state_space.cpp
+CMakeFiles/controllab.dir/src/control/state_space.cpp.o: CMakeFiles/controllab.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/param/showMeTheControls/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/controllab.dir/src/control/state_space.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/controllab.dir/src/control/state_space.cpp.o -MF CMakeFiles/controllab.dir/src/control/state_space.cpp.o.d -o CMakeFiles/controllab.dir/src/control/state_space.cpp.o -c /home/param/showMeTheControls/src/control/state_space.cpp
+
+CMakeFiles/controllab.dir/src/control/state_space.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/controllab.dir/src/control/state_space.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/param/showMeTheControls/src/control/state_space.cpp > CMakeFiles/controllab.dir/src/control/state_space.cpp.i
+
+CMakeFiles/controllab.dir/src/control/state_space.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/controllab.dir/src/control/state_space.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/param/showMeTheControls/src/control/state_space.cpp -o CMakeFiles/controllab.dir/src/control/state_space.cpp.s
+
+CMakeFiles/controllab.dir/src/control/transfer_function.cpp.o: CMakeFiles/controllab.dir/flags.make
+CMakeFiles/controllab.dir/src/control/transfer_function.cpp.o: /home/param/showMeTheControls/src/control/transfer_function.cpp
+CMakeFiles/controllab.dir/src/control/transfer_function.cpp.o: CMakeFiles/controllab.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/param/showMeTheControls/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/controllab.dir/src/control/transfer_function.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/controllab.dir/src/control/transfer_function.cpp.o -MF CMakeFiles/controllab.dir/src/control/transfer_function.cpp.o.d -o CMakeFiles/controllab.dir/src/control/transfer_function.cpp.o -c /home/param/showMeTheControls/src/control/transfer_function.cpp
+
+CMakeFiles/controllab.dir/src/control/transfer_function.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/controllab.dir/src/control/transfer_function.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/param/showMeTheControls/src/control/transfer_function.cpp > CMakeFiles/controllab.dir/src/control/transfer_function.cpp.i
+
+CMakeFiles/controllab.dir/src/control/transfer_function.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/controllab.dir/src/control/transfer_function.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/param/showMeTheControls/src/control/transfer_function.cpp -o CMakeFiles/controllab.dir/src/control/transfer_function.cpp.s
+
+CMakeFiles/controllab.dir/src/systems/second_order.cpp.o: CMakeFiles/controllab.dir/flags.make
+CMakeFiles/controllab.dir/src/systems/second_order.cpp.o: /home/param/showMeTheControls/src/systems/second_order.cpp
+CMakeFiles/controllab.dir/src/systems/second_order.cpp.o: CMakeFiles/controllab.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/param/showMeTheControls/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/controllab.dir/src/systems/second_order.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/controllab.dir/src/systems/second_order.cpp.o -MF CMakeFiles/controllab.dir/src/systems/second_order.cpp.o.d -o CMakeFiles/controllab.dir/src/systems/second_order.cpp.o -c /home/param/showMeTheControls/src/systems/second_order.cpp
+
+CMakeFiles/controllab.dir/src/systems/second_order.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/controllab.dir/src/systems/second_order.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/param/showMeTheControls/src/systems/second_order.cpp > CMakeFiles/controllab.dir/src/systems/second_order.cpp.i
+
+CMakeFiles/controllab.dir/src/systems/second_order.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/controllab.dir/src/systems/second_order.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/param/showMeTheControls/src/systems/second_order.cpp -o CMakeFiles/controllab.dir/src/systems/second_order.cpp.s
+
+CMakeFiles/controllab.dir/src/ui/pid_panel.cpp.o: CMakeFiles/controllab.dir/flags.make
+CMakeFiles/controllab.dir/src/ui/pid_panel.cpp.o: /home/param/showMeTheControls/src/ui/pid_panel.cpp
+CMakeFiles/controllab.dir/src/ui/pid_panel.cpp.o: CMakeFiles/controllab.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/param/showMeTheControls/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/controllab.dir/src/ui/pid_panel.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/controllab.dir/src/ui/pid_panel.cpp.o -MF CMakeFiles/controllab.dir/src/ui/pid_panel.cpp.o.d -o CMakeFiles/controllab.dir/src/ui/pid_panel.cpp.o -c /home/param/showMeTheControls/src/ui/pid_panel.cpp
+
+CMakeFiles/controllab.dir/src/ui/pid_panel.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/controllab.dir/src/ui/pid_panel.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/param/showMeTheControls/src/ui/pid_panel.cpp > CMakeFiles/controllab.dir/src/ui/pid_panel.cpp.i
+
+CMakeFiles/controllab.dir/src/ui/pid_panel.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/controllab.dir/src/ui/pid_panel.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/param/showMeTheControls/src/ui/pid_panel.cpp -o CMakeFiles/controllab.dir/src/ui/pid_panel.cpp.s
+
+CMakeFiles/controllab.dir/src/ui/state_space_panel.cpp.o: CMakeFiles/controllab.dir/flags.make
+CMakeFiles/controllab.dir/src/ui/state_space_panel.cpp.o: /home/param/showMeTheControls/src/ui/state_space_panel.cpp
+CMakeFiles/controllab.dir/src/ui/state_space_panel.cpp.o: CMakeFiles/controllab.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/param/showMeTheControls/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/controllab.dir/src/ui/state_space_panel.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/controllab.dir/src/ui/state_space_panel.cpp.o -MF CMakeFiles/controllab.dir/src/ui/state_space_panel.cpp.o.d -o CMakeFiles/controllab.dir/src/ui/state_space_panel.cpp.o -c /home/param/showMeTheControls/src/ui/state_space_panel.cpp
+
+CMakeFiles/controllab.dir/src/ui/state_space_panel.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/controllab.dir/src/ui/state_space_panel.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/param/showMeTheControls/src/ui/state_space_panel.cpp > CMakeFiles/controllab.dir/src/ui/state_space_panel.cpp.i
+
+CMakeFiles/controllab.dir/src/ui/state_space_panel.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/controllab.dir/src/ui/state_space_panel.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/param/showMeTheControls/src/ui/state_space_panel.cpp -o CMakeFiles/controllab.dir/src/ui/state_space_panel.cpp.s
+
+CMakeFiles/controllab.dir/src/viz/zplane.cpp.o: CMakeFiles/controllab.dir/flags.make
+CMakeFiles/controllab.dir/src/viz/zplane.cpp.o: /home/param/showMeTheControls/src/viz/zplane.cpp
+CMakeFiles/controllab.dir/src/viz/zplane.cpp.o: CMakeFiles/controllab.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/param/showMeTheControls/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/controllab.dir/src/viz/zplane.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/controllab.dir/src/viz/zplane.cpp.o -MF CMakeFiles/controllab.dir/src/viz/zplane.cpp.o.d -o CMakeFiles/controllab.dir/src/viz/zplane.cpp.o -c /home/param/showMeTheControls/src/viz/zplane.cpp
+
+CMakeFiles/controllab.dir/src/viz/zplane.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/controllab.dir/src/viz/zplane.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/param/showMeTheControls/src/viz/zplane.cpp > CMakeFiles/controllab.dir/src/viz/zplane.cpp.i
+
+CMakeFiles/controllab.dir/src/viz/zplane.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/controllab.dir/src/viz/zplane.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/param/showMeTheControls/src/viz/zplane.cpp -o CMakeFiles/controllab.dir/src/viz/zplane.cpp.s
+
 # Object files for target controllab
 controllab_OBJECTS = \
-"CMakeFiles/controllab.dir/src/main.cpp.o"
+"CMakeFiles/controllab.dir/src/main.cpp.o" \
+"CMakeFiles/controllab.dir/src/app.cpp.o" \
+"CMakeFiles/controllab.dir/src/control/pid.cpp.o" \
+"CMakeFiles/controllab.dir/src/control/state_space.cpp.o" \
+"CMakeFiles/controllab.dir/src/control/transfer_function.cpp.o" \
+"CMakeFiles/controllab.dir/src/systems/second_order.cpp.o" \
+"CMakeFiles/controllab.dir/src/ui/pid_panel.cpp.o" \
+"CMakeFiles/controllab.dir/src/ui/state_space_panel.cpp.o" \
+"CMakeFiles/controllab.dir/src/viz/zplane.cpp.o"
 
 # External object files for target controllab
 controllab_EXTERNAL_OBJECTS =
 
 controllab: CMakeFiles/controllab.dir/src/main.cpp.o
+controllab: CMakeFiles/controllab.dir/src/app.cpp.o
+controllab: CMakeFiles/controllab.dir/src/control/pid.cpp.o
+controllab: CMakeFiles/controllab.dir/src/control/state_space.cpp.o
+controllab: CMakeFiles/controllab.dir/src/control/transfer_function.cpp.o
+controllab: CMakeFiles/controllab.dir/src/systems/second_order.cpp.o
+controllab: CMakeFiles/controllab.dir/src/ui/pid_panel.cpp.o
+controllab: CMakeFiles/controllab.dir/src/ui/state_space_panel.cpp.o
+controllab: CMakeFiles/controllab.dir/src/viz/zplane.cpp.o
 controllab: CMakeFiles/controllab.dir/build.make
 controllab: libimgui.a
 controllab: external/glfw/src/libglfw3.a
@@ -99,7 +227,7 @@ controllab: /usr/lib/x86_64-linux-gnu/libm.so
 controllab: /usr/lib/x86_64-linux-gnu/libGLX.so
 controllab: /usr/lib/x86_64-linux-gnu/libOpenGL.so
 controllab: CMakeFiles/controllab.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/param/showMeTheControls/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable controllab"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/param/showMeTheControls/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable controllab"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/controllab.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

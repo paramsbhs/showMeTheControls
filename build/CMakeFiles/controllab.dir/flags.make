@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/param/showMeTheControls/external/imgui -I/home/param/showMeTheControls/external/imgui/backends -I/home/param/showMeTheControls/external/implot -I/home/param/showMeTheControls/external/glfw/include -isystem /usr/include/eigen3
+CXX_INCLUDES = -I/home/param/showMeTheControls/src -I/home/param/showMeTheControls/external/eigen -I/home/param/showMeTheControls/external/imgui -I/home/param/showMeTheControls/external/imgui/backends -I/home/param/showMeTheControls/external/implot -I/home/param/showMeTheControls/external/glfw/include
 
-CXX_FLAGS = -O3 -DNDEBUG -std=gnu++17
+CXX_FLAGS = -O3 -DNDEBUG -std=c++17
 

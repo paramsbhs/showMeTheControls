@@ -298,30 +298,6 @@ external/imgui/imgui.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui.dir/build.make CMakeFiles/imgui.dir/external/imgui/imgui.cpp.s
 .PHONY : external/imgui/imgui.cpp.s
 
-external/imgui/imgui_demo.o: external/imgui/imgui_demo.cpp.o
-.PHONY : external/imgui/imgui_demo.o
-
-# target to build an object file
-external/imgui/imgui_demo.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui.dir/build.make CMakeFiles/imgui.dir/external/imgui/imgui_demo.cpp.o
-.PHONY : external/imgui/imgui_demo.cpp.o
-
-external/imgui/imgui_demo.i: external/imgui/imgui_demo.cpp.i
-.PHONY : external/imgui/imgui_demo.i
-
-# target to preprocess a source file
-external/imgui/imgui_demo.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui.dir/build.make CMakeFiles/imgui.dir/external/imgui/imgui_demo.cpp.i
-.PHONY : external/imgui/imgui_demo.cpp.i
-
-external/imgui/imgui_demo.s: external/imgui/imgui_demo.cpp.s
-.PHONY : external/imgui/imgui_demo.s
-
-# target to generate assembly for a file
-external/imgui/imgui_demo.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui.dir/build.make CMakeFiles/imgui.dir/external/imgui/imgui_demo.cpp.s
-.PHONY : external/imgui/imgui_demo.cpp.s
-
 external/imgui/imgui_draw.o: external/imgui/imgui_draw.cpp.o
 .PHONY : external/imgui/imgui_draw.o
 
@@ -394,6 +370,150 @@ external/imgui/imgui_widgets.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui.dir/build.make CMakeFiles/imgui.dir/external/imgui/imgui_widgets.cpp.s
 .PHONY : external/imgui/imgui_widgets.cpp.s
 
+external/implot/implot.o: external/implot/implot.cpp.o
+.PHONY : external/implot/implot.o
+
+# target to build an object file
+external/implot/implot.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui.dir/build.make CMakeFiles/imgui.dir/external/implot/implot.cpp.o
+.PHONY : external/implot/implot.cpp.o
+
+external/implot/implot.i: external/implot/implot.cpp.i
+.PHONY : external/implot/implot.i
+
+# target to preprocess a source file
+external/implot/implot.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui.dir/build.make CMakeFiles/imgui.dir/external/implot/implot.cpp.i
+.PHONY : external/implot/implot.cpp.i
+
+external/implot/implot.s: external/implot/implot.cpp.s
+.PHONY : external/implot/implot.s
+
+# target to generate assembly for a file
+external/implot/implot.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui.dir/build.make CMakeFiles/imgui.dir/external/implot/implot.cpp.s
+.PHONY : external/implot/implot.cpp.s
+
+external/implot/implot_items.o: external/implot/implot_items.cpp.o
+.PHONY : external/implot/implot_items.o
+
+# target to build an object file
+external/implot/implot_items.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui.dir/build.make CMakeFiles/imgui.dir/external/implot/implot_items.cpp.o
+.PHONY : external/implot/implot_items.cpp.o
+
+external/implot/implot_items.i: external/implot/implot_items.cpp.i
+.PHONY : external/implot/implot_items.i
+
+# target to preprocess a source file
+external/implot/implot_items.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui.dir/build.make CMakeFiles/imgui.dir/external/implot/implot_items.cpp.i
+.PHONY : external/implot/implot_items.cpp.i
+
+external/implot/implot_items.s: external/implot/implot_items.cpp.s
+.PHONY : external/implot/implot_items.s
+
+# target to generate assembly for a file
+external/implot/implot_items.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui.dir/build.make CMakeFiles/imgui.dir/external/implot/implot_items.cpp.s
+.PHONY : external/implot/implot_items.cpp.s
+
+src/app.o: src/app.cpp.o
+.PHONY : src/app.o
+
+# target to build an object file
+src/app.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/controllab.dir/build.make CMakeFiles/controllab.dir/src/app.cpp.o
+.PHONY : src/app.cpp.o
+
+src/app.i: src/app.cpp.i
+.PHONY : src/app.i
+
+# target to preprocess a source file
+src/app.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/controllab.dir/build.make CMakeFiles/controllab.dir/src/app.cpp.i
+.PHONY : src/app.cpp.i
+
+src/app.s: src/app.cpp.s
+.PHONY : src/app.s
+
+# target to generate assembly for a file
+src/app.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/controllab.dir/build.make CMakeFiles/controllab.dir/src/app.cpp.s
+.PHONY : src/app.cpp.s
+
+src/control/pid.o: src/control/pid.cpp.o
+.PHONY : src/control/pid.o
+
+# target to build an object file
+src/control/pid.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/controllab.dir/build.make CMakeFiles/controllab.dir/src/control/pid.cpp.o
+.PHONY : src/control/pid.cpp.o
+
+src/control/pid.i: src/control/pid.cpp.i
+.PHONY : src/control/pid.i
+
+# target to preprocess a source file
+src/control/pid.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/controllab.dir/build.make CMakeFiles/controllab.dir/src/control/pid.cpp.i
+.PHONY : src/control/pid.cpp.i
+
+src/control/pid.s: src/control/pid.cpp.s
+.PHONY : src/control/pid.s
+
+# target to generate assembly for a file
+src/control/pid.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/controllab.dir/build.make CMakeFiles/controllab.dir/src/control/pid.cpp.s
+.PHONY : src/control/pid.cpp.s
+
+src/control/state_space.o: src/control/state_space.cpp.o
+.PHONY : src/control/state_space.o
+
+# target to build an object file
+src/control/state_space.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/controllab.dir/build.make CMakeFiles/controllab.dir/src/control/state_space.cpp.o
+.PHONY : src/control/state_space.cpp.o
+
+src/control/state_space.i: src/control/state_space.cpp.i
+.PHONY : src/control/state_space.i
+
+# target to preprocess a source file
+src/control/state_space.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/controllab.dir/build.make CMakeFiles/controllab.dir/src/control/state_space.cpp.i
+.PHONY : src/control/state_space.cpp.i
+
+src/control/state_space.s: src/control/state_space.cpp.s
+.PHONY : src/control/state_space.s
+
+# target to generate assembly for a file
+src/control/state_space.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/controllab.dir/build.make CMakeFiles/controllab.dir/src/control/state_space.cpp.s
+.PHONY : src/control/state_space.cpp.s
+
+src/control/transfer_function.o: src/control/transfer_function.cpp.o
+.PHONY : src/control/transfer_function.o
+
+# target to build an object file
+src/control/transfer_function.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/controllab.dir/build.make CMakeFiles/controllab.dir/src/control/transfer_function.cpp.o
+.PHONY : src/control/transfer_function.cpp.o
+
+src/control/transfer_function.i: src/control/transfer_function.cpp.i
+.PHONY : src/control/transfer_function.i
+
+# target to preprocess a source file
+src/control/transfer_function.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/controllab.dir/build.make CMakeFiles/controllab.dir/src/control/transfer_function.cpp.i
+.PHONY : src/control/transfer_function.cpp.i
+
+src/control/transfer_function.s: src/control/transfer_function.cpp.s
+.PHONY : src/control/transfer_function.s
+
+# target to generate assembly for a file
+src/control/transfer_function.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/controllab.dir/build.make CMakeFiles/controllab.dir/src/control/transfer_function.cpp.s
+.PHONY : src/control/transfer_function.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -417,6 +537,102 @@ src/main.s: src/main.cpp.s
 src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/controllab.dir/build.make CMakeFiles/controllab.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
+
+src/systems/second_order.o: src/systems/second_order.cpp.o
+.PHONY : src/systems/second_order.o
+
+# target to build an object file
+src/systems/second_order.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/controllab.dir/build.make CMakeFiles/controllab.dir/src/systems/second_order.cpp.o
+.PHONY : src/systems/second_order.cpp.o
+
+src/systems/second_order.i: src/systems/second_order.cpp.i
+.PHONY : src/systems/second_order.i
+
+# target to preprocess a source file
+src/systems/second_order.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/controllab.dir/build.make CMakeFiles/controllab.dir/src/systems/second_order.cpp.i
+.PHONY : src/systems/second_order.cpp.i
+
+src/systems/second_order.s: src/systems/second_order.cpp.s
+.PHONY : src/systems/second_order.s
+
+# target to generate assembly for a file
+src/systems/second_order.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/controllab.dir/build.make CMakeFiles/controllab.dir/src/systems/second_order.cpp.s
+.PHONY : src/systems/second_order.cpp.s
+
+src/ui/pid_panel.o: src/ui/pid_panel.cpp.o
+.PHONY : src/ui/pid_panel.o
+
+# target to build an object file
+src/ui/pid_panel.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/controllab.dir/build.make CMakeFiles/controllab.dir/src/ui/pid_panel.cpp.o
+.PHONY : src/ui/pid_panel.cpp.o
+
+src/ui/pid_panel.i: src/ui/pid_panel.cpp.i
+.PHONY : src/ui/pid_panel.i
+
+# target to preprocess a source file
+src/ui/pid_panel.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/controllab.dir/build.make CMakeFiles/controllab.dir/src/ui/pid_panel.cpp.i
+.PHONY : src/ui/pid_panel.cpp.i
+
+src/ui/pid_panel.s: src/ui/pid_panel.cpp.s
+.PHONY : src/ui/pid_panel.s
+
+# target to generate assembly for a file
+src/ui/pid_panel.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/controllab.dir/build.make CMakeFiles/controllab.dir/src/ui/pid_panel.cpp.s
+.PHONY : src/ui/pid_panel.cpp.s
+
+src/ui/state_space_panel.o: src/ui/state_space_panel.cpp.o
+.PHONY : src/ui/state_space_panel.o
+
+# target to build an object file
+src/ui/state_space_panel.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/controllab.dir/build.make CMakeFiles/controllab.dir/src/ui/state_space_panel.cpp.o
+.PHONY : src/ui/state_space_panel.cpp.o
+
+src/ui/state_space_panel.i: src/ui/state_space_panel.cpp.i
+.PHONY : src/ui/state_space_panel.i
+
+# target to preprocess a source file
+src/ui/state_space_panel.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/controllab.dir/build.make CMakeFiles/controllab.dir/src/ui/state_space_panel.cpp.i
+.PHONY : src/ui/state_space_panel.cpp.i
+
+src/ui/state_space_panel.s: src/ui/state_space_panel.cpp.s
+.PHONY : src/ui/state_space_panel.s
+
+# target to generate assembly for a file
+src/ui/state_space_panel.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/controllab.dir/build.make CMakeFiles/controllab.dir/src/ui/state_space_panel.cpp.s
+.PHONY : src/ui/state_space_panel.cpp.s
+
+src/viz/zplane.o: src/viz/zplane.cpp.o
+.PHONY : src/viz/zplane.o
+
+# target to build an object file
+src/viz/zplane.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/controllab.dir/build.make CMakeFiles/controllab.dir/src/viz/zplane.cpp.o
+.PHONY : src/viz/zplane.cpp.o
+
+src/viz/zplane.i: src/viz/zplane.cpp.i
+.PHONY : src/viz/zplane.i
+
+# target to preprocess a source file
+src/viz/zplane.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/controllab.dir/build.make CMakeFiles/controllab.dir/src/viz/zplane.cpp.i
+.PHONY : src/viz/zplane.cpp.i
+
+src/viz/zplane.s: src/viz/zplane.cpp.s
+.PHONY : src/viz/zplane.s
+
+# target to generate assembly for a file
+src/viz/zplane.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/controllab.dir/build.make CMakeFiles/controllab.dir/src/viz/zplane.cpp.s
+.PHONY : src/viz/zplane.cpp.s
 
 # Help Target
 help:
@@ -444,9 +660,6 @@ help:
 	@echo "... external/imgui/imgui.o"
 	@echo "... external/imgui/imgui.i"
 	@echo "... external/imgui/imgui.s"
-	@echo "... external/imgui/imgui_demo.o"
-	@echo "... external/imgui/imgui_demo.i"
-	@echo "... external/imgui/imgui_demo.s"
 	@echo "... external/imgui/imgui_draw.o"
 	@echo "... external/imgui/imgui_draw.i"
 	@echo "... external/imgui/imgui_draw.s"
@@ -456,9 +669,39 @@ help:
 	@echo "... external/imgui/imgui_widgets.o"
 	@echo "... external/imgui/imgui_widgets.i"
 	@echo "... external/imgui/imgui_widgets.s"
+	@echo "... external/implot/implot.o"
+	@echo "... external/implot/implot.i"
+	@echo "... external/implot/implot.s"
+	@echo "... external/implot/implot_items.o"
+	@echo "... external/implot/implot_items.i"
+	@echo "... external/implot/implot_items.s"
+	@echo "... src/app.o"
+	@echo "... src/app.i"
+	@echo "... src/app.s"
+	@echo "... src/control/pid.o"
+	@echo "... src/control/pid.i"
+	@echo "... src/control/pid.s"
+	@echo "... src/control/state_space.o"
+	@echo "... src/control/state_space.i"
+	@echo "... src/control/state_space.s"
+	@echo "... src/control/transfer_function.o"
+	@echo "... src/control/transfer_function.i"
+	@echo "... src/control/transfer_function.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/systems/second_order.o"
+	@echo "... src/systems/second_order.i"
+	@echo "... src/systems/second_order.s"
+	@echo "... src/ui/pid_panel.o"
+	@echo "... src/ui/pid_panel.i"
+	@echo "... src/ui/pid_panel.s"
+	@echo "... src/ui/state_space_panel.o"
+	@echo "... src/ui/state_space_panel.i"
+	@echo "... src/ui/state_space_panel.s"
+	@echo "... src/viz/zplane.o"
+	@echo "... src/viz/zplane.i"
+	@echo "... src/viz/zplane.s"
 .PHONY : help
 
 
