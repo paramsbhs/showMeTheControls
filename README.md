@@ -19,3 +19,8 @@ cmake .. -DCMAKE_BUILD_TYPE=Release
 cmake --build . -j$(nproc)
 ./controllab
 ```
+
+## Screenshots
+![Control Theory Tutor UI](external/Screenshot%20from%202026-02-24%2010-54-33.png)
+
+![Root Locus View](external/Screenshot%20from%202026-02-24%2010-55-27.png)
