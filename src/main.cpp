@@ -20,7 +20,7 @@ int main() {
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
-    GLFWwindow* window = glfwCreateWindow(1280, 800, "Control Lab", nullptr, nullptr);
+    GLFWwindow* window = glfwCreateWindow(1920, 1080, "Control Lab", nullptr, nullptr);
     if (!window) {
         std::cerr << "Failed to create GLFW window\n";
         glfwTerminate();
@@ -36,7 +36,26 @@ int main() {
     ImGui::StyleColorsDark();
 
     ImGuiIO& io = ImGui::GetIO();
-    (void)io;
+    io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;
+
+    ImFontConfig body_cfg;
+    body_cfg.OversampleH = 2;
+    body_cfg.OversampleV = 2;
+    body_cfg.PixelSnapH = false;
+    io.Fonts->AddFontFromFileTTF("external/imgui/misc/fonts/Karla-Regular.ttf", 19.0f, &body_cfg);
+
+    ImFontConfig heading_cfg;
+    heading_cfg.MergeMode = false;
+    io.Fonts->AddFontFromFileTTF("external/imgui/misc/fonts/Roboto-Medium.ttf", 22.0f, &heading_cfg);
+
+    ImGuiStyle& style = ImGui::GetStyle();
+    style.WindowRounding = 8.0f;
+    style.FrameRounding = 6.0f;
+    style.GrabRounding = 6.0f;
+    style.ScrollbarRounding = 8.0f;
+    style.WindowPadding = ImVec2(14.0f, 12.0f);
+    style.FramePadding = ImVec2(10.0f, 6.0f);
+    style.ItemSpacing = ImVec2(10.0f, 8.0f);
 
     if (!ImGui_ImplGlfw_InitForOpenGL(window, true)) {
         std::cerr << "Failed to initialize ImGui GLFW backend\n";

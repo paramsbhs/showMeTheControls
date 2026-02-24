@@ -65,6 +65,7 @@ CMAKE_BINARY_DIR = /home/param/showMeTheControls/build
 # The main recursive "all" target.
 all: CMakeFiles/imgui.dir/all
 all: CMakeFiles/controllab.dir/all
+all: CMakeFiles/designer_tests.dir/all
 all: external/glfw/all
 .PHONY : all
 
@@ -75,6 +76,7 @@ preinstall: external/glfw/preinstall
 # The main recursive "clean" target.
 clean: CMakeFiles/imgui.dir/clean
 clean: CMakeFiles/controllab.dir/clean
+clean: CMakeFiles/designer_tests.dir/clean
 clean: external/glfw/clean
 .PHONY : clean
 
@@ -117,7 +119,7 @@ external/glfw/src/clean: external/glfw/src/CMakeFiles/update_mappings.dir/clean
 CMakeFiles/imgui.dir/all: external/glfw/src/CMakeFiles/glfw.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui.dir/build.make CMakeFiles/imgui.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui.dir/build.make CMakeFiles/imgui.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/param/showMeTheControls/build/CMakeFiles --progress-num=35,36,37,38,39,40,41,42,43 "Built target imgui"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/param/showMeTheControls/build/CMakeFiles --progress-num=36,37,38,39,40,41,42,43,44 "Built target imgui"
 .PHONY : CMakeFiles/imgui.dir/all
 
 # Build rule for subdir invocation for target.
@@ -144,12 +146,12 @@ CMakeFiles/controllab.dir/all: external/glfw/src/CMakeFiles/glfw.dir/all
 CMakeFiles/controllab.dir/all: CMakeFiles/imgui.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/controllab.dir/build.make CMakeFiles/controllab.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/controllab.dir/build.make CMakeFiles/controllab.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/param/showMeTheControls/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10 "Built target controllab"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/param/showMeTheControls/build/CMakeFiles --progress-num=1,2,3,4,5,6 "Built target controllab"
 .PHONY : CMakeFiles/controllab.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/controllab.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/param/showMeTheControls/build/CMakeFiles 43
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/param/showMeTheControls/build/CMakeFiles 39
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/controllab.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/param/showMeTheControls/build/CMakeFiles 0
 .PHONY : CMakeFiles/controllab.dir/rule
@@ -162,6 +164,33 @@ controllab: CMakeFiles/controllab.dir/rule
 CMakeFiles/controllab.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/controllab.dir/build.make CMakeFiles/controllab.dir/clean
 .PHONY : CMakeFiles/controllab.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/designer_tests.dir
+
+# All Build rule for target.
+CMakeFiles/designer_tests.dir/all: external/glfw/src/CMakeFiles/glfw.dir/all
+CMakeFiles/designer_tests.dir/all: CMakeFiles/imgui.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/designer_tests.dir/build.make CMakeFiles/designer_tests.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/designer_tests.dir/build.make CMakeFiles/designer_tests.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/param/showMeTheControls/build/CMakeFiles --progress-num=7,8,9,10,11 "Built target designer_tests"
+.PHONY : CMakeFiles/designer_tests.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/designer_tests.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/param/showMeTheControls/build/CMakeFiles 38
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/designer_tests.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/param/showMeTheControls/build/CMakeFiles 0
+.PHONY : CMakeFiles/designer_tests.dir/rule
+
+# Convenience name for target.
+designer_tests: CMakeFiles/designer_tests.dir/rule
+.PHONY : designer_tests
+
+# clean rule for target.
+CMakeFiles/designer_tests.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/designer_tests.dir/build.make CMakeFiles/designer_tests.dir/clean
+.PHONY : CMakeFiles/designer_tests.dir/clean
 
 #=============================================================================
 # Target rules for target external/glfw/CMakeFiles/uninstall.dir
@@ -196,7 +225,7 @@ external/glfw/CMakeFiles/uninstall.dir/clean:
 external/glfw/src/CMakeFiles/glfw.dir/all:
 	$(MAKE) $(MAKESILENT) -f external/glfw/src/CMakeFiles/glfw.dir/build.make external/glfw/src/CMakeFiles/glfw.dir/depend
 	$(MAKE) $(MAKESILENT) -f external/glfw/src/CMakeFiles/glfw.dir/build.make external/glfw/src/CMakeFiles/glfw.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/param/showMeTheControls/build/CMakeFiles --progress-num=11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34 "Built target glfw"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/param/showMeTheControls/build/CMakeFiles --progress-num=12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35 "Built target glfw"
 .PHONY : external/glfw/src/CMakeFiles/glfw.dir/all
 
 # Build rule for subdir invocation for target.
@@ -222,7 +251,7 @@ external/glfw/src/CMakeFiles/glfw.dir/clean:
 external/glfw/src/CMakeFiles/update_mappings.dir/all:
 	$(MAKE) $(MAKESILENT) -f external/glfw/src/CMakeFiles/update_mappings.dir/build.make external/glfw/src/CMakeFiles/update_mappings.dir/depend
 	$(MAKE) $(MAKESILENT) -f external/glfw/src/CMakeFiles/update_mappings.dir/build.make external/glfw/src/CMakeFiles/update_mappings.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/param/showMeTheControls/build/CMakeFiles --progress-num=44 "Built target update_mappings"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/param/showMeTheControls/build/CMakeFiles --progress-num=45 "Built target update_mappings"
 .PHONY : external/glfw/src/CMakeFiles/update_mappings.dir/all
 
 # Build rule for subdir invocation for target.

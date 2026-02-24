@@ -39,13 +39,9 @@ target_link_libraries(imgui PUBLIC glfw OpenGL::GL)
 add_executable(controllab
     src/main.cpp
     src/app.cpp
-    src/control/pid.cpp
-    src/control/state_space.cpp
-    src/control/transfer_function.cpp
-    src/systems/second_order.cpp
-    src/ui/pid_panel.cpp
-    src/ui/state_space_panel.cpp
-    src/viz/zplane.cpp
+    src/designer/block_designer.cpp
+    src/designer/block_designer_ui.cpp
+    src/designer/control_math.cpp
 )
 target_include_directories(controllab PRIVATE
     ${CMAKE_CURRENT_SOURCE_DIR}/src
@@ -56,3 +52,18 @@ target_link_libraries(controllab PRIVATE imgui glfw OpenGL::GL)
 if(UNIX AND NOT APPLE)
     target_link_libraries(controllab PRIVATE m)
 endif()
+
+add_executable(designer_tests
+    tests/designer_tests.cpp
+    src/designer/block_designer.cpp
+    src/designer/block_designer_ui.cpp
+    src/designer/control_math.cpp
+)
+target_include_directories(designer_tests PRIVATE
+    ${CMAKE_CURRENT_SOURCE_DIR}/src
+    ${EIGEN_DIR}
+)
+target_link_libraries(designer_tests PRIVATE imgui glfw OpenGL::GL)
+
+enable_testing()
+add_test(NAME designer_tests COMMAND designer_tests)

@@ -65,6 +65,16 @@ CMAKE_BINARY_DIR = /home/param/showMeTheControls/build
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+.PHONY : test/fast
+
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "No interactive CMake dialog available..."
@@ -186,6 +196,19 @@ controllab: cmake_check_build_system
 controllab/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/controllab.dir/build.make CMakeFiles/controllab.dir/build
 .PHONY : controllab/fast
+
+#=============================================================================
+# Target rules for targets named designer_tests
+
+# Build rule for target.
+designer_tests: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 designer_tests
+.PHONY : designer_tests
+
+# fast build rule for target.
+designer_tests/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/designer_tests.dir/build.make CMakeFiles/designer_tests.dir/build
+.PHONY : designer_tests/fast
 
 #=============================================================================
 # Target rules for targets named uninstall
@@ -442,77 +465,86 @@ src/app.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/controllab.dir/build.make CMakeFiles/controllab.dir/src/app.cpp.s
 .PHONY : src/app.cpp.s
 
-src/control/pid.o: src/control/pid.cpp.o
-.PHONY : src/control/pid.o
+src/designer/block_designer.o: src/designer/block_designer.cpp.o
+.PHONY : src/designer/block_designer.o
 
 # target to build an object file
-src/control/pid.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/controllab.dir/build.make CMakeFiles/controllab.dir/src/control/pid.cpp.o
-.PHONY : src/control/pid.cpp.o
+src/designer/block_designer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/controllab.dir/build.make CMakeFiles/controllab.dir/src/designer/block_designer.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/designer_tests.dir/build.make CMakeFiles/designer_tests.dir/src/designer/block_designer.cpp.o
+.PHONY : src/designer/block_designer.cpp.o
 
-src/control/pid.i: src/control/pid.cpp.i
-.PHONY : src/control/pid.i
+src/designer/block_designer.i: src/designer/block_designer.cpp.i
+.PHONY : src/designer/block_designer.i
 
 # target to preprocess a source file
-src/control/pid.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/controllab.dir/build.make CMakeFiles/controllab.dir/src/control/pid.cpp.i
-.PHONY : src/control/pid.cpp.i
+src/designer/block_designer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/controllab.dir/build.make CMakeFiles/controllab.dir/src/designer/block_designer.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/designer_tests.dir/build.make CMakeFiles/designer_tests.dir/src/designer/block_designer.cpp.i
+.PHONY : src/designer/block_designer.cpp.i
 
-src/control/pid.s: src/control/pid.cpp.s
-.PHONY : src/control/pid.s
+src/designer/block_designer.s: src/designer/block_designer.cpp.s
+.PHONY : src/designer/block_designer.s
 
 # target to generate assembly for a file
-src/control/pid.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/controllab.dir/build.make CMakeFiles/controllab.dir/src/control/pid.cpp.s
-.PHONY : src/control/pid.cpp.s
+src/designer/block_designer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/controllab.dir/build.make CMakeFiles/controllab.dir/src/designer/block_designer.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/designer_tests.dir/build.make CMakeFiles/designer_tests.dir/src/designer/block_designer.cpp.s
+.PHONY : src/designer/block_designer.cpp.s
 
-src/control/state_space.o: src/control/state_space.cpp.o
-.PHONY : src/control/state_space.o
+src/designer/block_designer_ui.o: src/designer/block_designer_ui.cpp.o
+.PHONY : src/designer/block_designer_ui.o
 
 # target to build an object file
-src/control/state_space.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/controllab.dir/build.make CMakeFiles/controllab.dir/src/control/state_space.cpp.o
-.PHONY : src/control/state_space.cpp.o
+src/designer/block_designer_ui.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/controllab.dir/build.make CMakeFiles/controllab.dir/src/designer/block_designer_ui.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/designer_tests.dir/build.make CMakeFiles/designer_tests.dir/src/designer/block_designer_ui.cpp.o
+.PHONY : src/designer/block_designer_ui.cpp.o
 
-src/control/state_space.i: src/control/state_space.cpp.i
-.PHONY : src/control/state_space.i
+src/designer/block_designer_ui.i: src/designer/block_designer_ui.cpp.i
+.PHONY : src/designer/block_designer_ui.i
 
 # target to preprocess a source file
-src/control/state_space.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/controllab.dir/build.make CMakeFiles/controllab.dir/src/control/state_space.cpp.i
-.PHONY : src/control/state_space.cpp.i
+src/designer/block_designer_ui.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/controllab.dir/build.make CMakeFiles/controllab.dir/src/designer/block_designer_ui.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/designer_tests.dir/build.make CMakeFiles/designer_tests.dir/src/designer/block_designer_ui.cpp.i
+.PHONY : src/designer/block_designer_ui.cpp.i
 
-src/control/state_space.s: src/control/state_space.cpp.s
-.PHONY : src/control/state_space.s
+src/designer/block_designer_ui.s: src/designer/block_designer_ui.cpp.s
+.PHONY : src/designer/block_designer_ui.s
 
 # target to generate assembly for a file
-src/control/state_space.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/controllab.dir/build.make CMakeFiles/controllab.dir/src/control/state_space.cpp.s
-.PHONY : src/control/state_space.cpp.s
+src/designer/block_designer_ui.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/controllab.dir/build.make CMakeFiles/controllab.dir/src/designer/block_designer_ui.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/designer_tests.dir/build.make CMakeFiles/designer_tests.dir/src/designer/block_designer_ui.cpp.s
+.PHONY : src/designer/block_designer_ui.cpp.s
 
-src/control/transfer_function.o: src/control/transfer_function.cpp.o
-.PHONY : src/control/transfer_function.o
+src/designer/control_math.o: src/designer/control_math.cpp.o
+.PHONY : src/designer/control_math.o
 
 # target to build an object file
-src/control/transfer_function.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/controllab.dir/build.make CMakeFiles/controllab.dir/src/control/transfer_function.cpp.o
-.PHONY : src/control/transfer_function.cpp.o
+src/designer/control_math.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/controllab.dir/build.make CMakeFiles/controllab.dir/src/designer/control_math.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/designer_tests.dir/build.make CMakeFiles/designer_tests.dir/src/designer/control_math.cpp.o
+.PHONY : src/designer/control_math.cpp.o
 
-src/control/transfer_function.i: src/control/transfer_function.cpp.i
-.PHONY : src/control/transfer_function.i
+src/designer/control_math.i: src/designer/control_math.cpp.i
+.PHONY : src/designer/control_math.i
 
 # target to preprocess a source file
-src/control/transfer_function.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/controllab.dir/build.make CMakeFiles/controllab.dir/src/control/transfer_function.cpp.i
-.PHONY : src/control/transfer_function.cpp.i
+src/designer/control_math.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/controllab.dir/build.make CMakeFiles/controllab.dir/src/designer/control_math.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/designer_tests.dir/build.make CMakeFiles/designer_tests.dir/src/designer/control_math.cpp.i
+.PHONY : src/designer/control_math.cpp.i
 
-src/control/transfer_function.s: src/control/transfer_function.cpp.s
-.PHONY : src/control/transfer_function.s
+src/designer/control_math.s: src/designer/control_math.cpp.s
+.PHONY : src/designer/control_math.s
 
 # target to generate assembly for a file
-src/control/transfer_function.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/controllab.dir/build.make CMakeFiles/controllab.dir/src/control/transfer_function.cpp.s
-.PHONY : src/control/transfer_function.cpp.s
+src/designer/control_math.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/controllab.dir/build.make CMakeFiles/controllab.dir/src/designer/control_math.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/designer_tests.dir/build.make CMakeFiles/designer_tests.dir/src/designer/control_math.cpp.s
+.PHONY : src/designer/control_math.cpp.s
 
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
@@ -538,101 +570,29 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/controllab.dir/build.make CMakeFiles/controllab.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
-src/systems/second_order.o: src/systems/second_order.cpp.o
-.PHONY : src/systems/second_order.o
+tests/designer_tests.o: tests/designer_tests.cpp.o
+.PHONY : tests/designer_tests.o
 
 # target to build an object file
-src/systems/second_order.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/controllab.dir/build.make CMakeFiles/controllab.dir/src/systems/second_order.cpp.o
-.PHONY : src/systems/second_order.cpp.o
+tests/designer_tests.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/designer_tests.dir/build.make CMakeFiles/designer_tests.dir/tests/designer_tests.cpp.o
+.PHONY : tests/designer_tests.cpp.o
 
-src/systems/second_order.i: src/systems/second_order.cpp.i
-.PHONY : src/systems/second_order.i
-
-# target to preprocess a source file
-src/systems/second_order.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/controllab.dir/build.make CMakeFiles/controllab.dir/src/systems/second_order.cpp.i
-.PHONY : src/systems/second_order.cpp.i
-
-src/systems/second_order.s: src/systems/second_order.cpp.s
-.PHONY : src/systems/second_order.s
-
-# target to generate assembly for a file
-src/systems/second_order.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/controllab.dir/build.make CMakeFiles/controllab.dir/src/systems/second_order.cpp.s
-.PHONY : src/systems/second_order.cpp.s
-
-src/ui/pid_panel.o: src/ui/pid_panel.cpp.o
-.PHONY : src/ui/pid_panel.o
-
-# target to build an object file
-src/ui/pid_panel.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/controllab.dir/build.make CMakeFiles/controllab.dir/src/ui/pid_panel.cpp.o
-.PHONY : src/ui/pid_panel.cpp.o
-
-src/ui/pid_panel.i: src/ui/pid_panel.cpp.i
-.PHONY : src/ui/pid_panel.i
+tests/designer_tests.i: tests/designer_tests.cpp.i
+.PHONY : tests/designer_tests.i
 
 # target to preprocess a source file
-src/ui/pid_panel.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/controllab.dir/build.make CMakeFiles/controllab.dir/src/ui/pid_panel.cpp.i
-.PHONY : src/ui/pid_panel.cpp.i
+tests/designer_tests.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/designer_tests.dir/build.make CMakeFiles/designer_tests.dir/tests/designer_tests.cpp.i
+.PHONY : tests/designer_tests.cpp.i
 
-src/ui/pid_panel.s: src/ui/pid_panel.cpp.s
-.PHONY : src/ui/pid_panel.s
-
-# target to generate assembly for a file
-src/ui/pid_panel.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/controllab.dir/build.make CMakeFiles/controllab.dir/src/ui/pid_panel.cpp.s
-.PHONY : src/ui/pid_panel.cpp.s
-
-src/ui/state_space_panel.o: src/ui/state_space_panel.cpp.o
-.PHONY : src/ui/state_space_panel.o
-
-# target to build an object file
-src/ui/state_space_panel.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/controllab.dir/build.make CMakeFiles/controllab.dir/src/ui/state_space_panel.cpp.o
-.PHONY : src/ui/state_space_panel.cpp.o
-
-src/ui/state_space_panel.i: src/ui/state_space_panel.cpp.i
-.PHONY : src/ui/state_space_panel.i
-
-# target to preprocess a source file
-src/ui/state_space_panel.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/controllab.dir/build.make CMakeFiles/controllab.dir/src/ui/state_space_panel.cpp.i
-.PHONY : src/ui/state_space_panel.cpp.i
-
-src/ui/state_space_panel.s: src/ui/state_space_panel.cpp.s
-.PHONY : src/ui/state_space_panel.s
+tests/designer_tests.s: tests/designer_tests.cpp.s
+.PHONY : tests/designer_tests.s
 
 # target to generate assembly for a file
-src/ui/state_space_panel.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/controllab.dir/build.make CMakeFiles/controllab.dir/src/ui/state_space_panel.cpp.s
-.PHONY : src/ui/state_space_panel.cpp.s
-
-src/viz/zplane.o: src/viz/zplane.cpp.o
-.PHONY : src/viz/zplane.o
-
-# target to build an object file
-src/viz/zplane.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/controllab.dir/build.make CMakeFiles/controllab.dir/src/viz/zplane.cpp.o
-.PHONY : src/viz/zplane.cpp.o
-
-src/viz/zplane.i: src/viz/zplane.cpp.i
-.PHONY : src/viz/zplane.i
-
-# target to preprocess a source file
-src/viz/zplane.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/controllab.dir/build.make CMakeFiles/controllab.dir/src/viz/zplane.cpp.i
-.PHONY : src/viz/zplane.cpp.i
-
-src/viz/zplane.s: src/viz/zplane.cpp.s
-.PHONY : src/viz/zplane.s
-
-# target to generate assembly for a file
-src/viz/zplane.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/controllab.dir/build.make CMakeFiles/controllab.dir/src/viz/zplane.cpp.s
-.PHONY : src/viz/zplane.cpp.s
+tests/designer_tests.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/designer_tests.dir/build.make CMakeFiles/designer_tests.dir/tests/designer_tests.cpp.s
+.PHONY : tests/designer_tests.cpp.s
 
 # Help Target
 help:
@@ -646,9 +606,11 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
+	@echo "... test"
 	@echo "... uninstall"
 	@echo "... update_mappings"
 	@echo "... controllab"
+	@echo "... designer_tests"
 	@echo "... glfw"
 	@echo "... imgui"
 	@echo "... external/imgui/backends/imgui_impl_glfw.o"
@@ -678,30 +640,21 @@ help:
 	@echo "... src/app.o"
 	@echo "... src/app.i"
 	@echo "... src/app.s"
-	@echo "... src/control/pid.o"
-	@echo "... src/control/pid.i"
-	@echo "... src/control/pid.s"
-	@echo "... src/control/state_space.o"
-	@echo "... src/control/state_space.i"
-	@echo "... src/control/state_space.s"
-	@echo "... src/control/transfer_function.o"
-	@echo "... src/control/transfer_function.i"
-	@echo "... src/control/transfer_function.s"
+	@echo "... src/designer/block_designer.o"
+	@echo "... src/designer/block_designer.i"
+	@echo "... src/designer/block_designer.s"
+	@echo "... src/designer/block_designer_ui.o"
+	@echo "... src/designer/block_designer_ui.i"
+	@echo "... src/designer/block_designer_ui.s"
+	@echo "... src/designer/control_math.o"
+	@echo "... src/designer/control_math.i"
+	@echo "... src/designer/control_math.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
-	@echo "... src/systems/second_order.o"
-	@echo "... src/systems/second_order.i"
-	@echo "... src/systems/second_order.s"
-	@echo "... src/ui/pid_panel.o"
-	@echo "... src/ui/pid_panel.i"
-	@echo "... src/ui/pid_panel.s"
-	@echo "... src/ui/state_space_panel.o"
-	@echo "... src/ui/state_space_panel.i"
-	@echo "... src/ui/state_space_panel.s"
-	@echo "... src/viz/zplane.o"
-	@echo "... src/viz/zplane.i"
-	@echo "... src/viz/zplane.s"
+	@echo "... tests/designer_tests.o"
+	@echo "... tests/designer_tests.i"
+	@echo "... tests/designer_tests.s"
 .PHONY : help
 
 

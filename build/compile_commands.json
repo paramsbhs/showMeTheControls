@@ -61,45 +61,45 @@
 },
 {
   "directory": "/home/param/showMeTheControls/build",
-  "command": "/usr/bin/c++  -I/home/param/showMeTheControls/src -I/home/param/showMeTheControls/external/eigen -I/home/param/showMeTheControls/external/imgui -I/home/param/showMeTheControls/external/imgui/backends -I/home/param/showMeTheControls/external/implot -I/home/param/showMeTheControls/external/glfw/include -O3 -DNDEBUG -std=c++17 -o CMakeFiles/controllab.dir/src/control/pid.cpp.o -c /home/param/showMeTheControls/src/control/pid.cpp",
-  "file": "/home/param/showMeTheControls/src/control/pid.cpp",
-  "output": "CMakeFiles/controllab.dir/src/control/pid.cpp.o"
+  "command": "/usr/bin/c++  -I/home/param/showMeTheControls/src -I/home/param/showMeTheControls/external/eigen -I/home/param/showMeTheControls/external/imgui -I/home/param/showMeTheControls/external/imgui/backends -I/home/param/showMeTheControls/external/implot -I/home/param/showMeTheControls/external/glfw/include -O3 -DNDEBUG -std=c++17 -o CMakeFiles/controllab.dir/src/designer/block_designer.cpp.o -c /home/param/showMeTheControls/src/designer/block_designer.cpp",
+  "file": "/home/param/showMeTheControls/src/designer/block_designer.cpp",
+  "output": "CMakeFiles/controllab.dir/src/designer/block_designer.cpp.o"
 },
 {
   "directory": "/home/param/showMeTheControls/build",
-  "command": "/usr/bin/c++  -I/home/param/showMeTheControls/src -I/home/param/showMeTheControls/external/eigen -I/home/param/showMeTheControls/external/imgui -I/home/param/showMeTheControls/external/imgui/backends -I/home/param/showMeTheControls/external/implot -I/home/param/showMeTheControls/external/glfw/include -O3 -DNDEBUG -std=c++17 -o CMakeFiles/controllab.dir/src/control/state_space.cpp.o -c /home/param/showMeTheControls/src/control/state_space.cpp",
-  "file": "/home/param/showMeTheControls/src/control/state_space.cpp",
-  "output": "CMakeFiles/controllab.dir/src/control/state_space.cpp.o"
+  "command": "/usr/bin/c++  -I/home/param/showMeTheControls/src -I/home/param/showMeTheControls/external/eigen -I/home/param/showMeTheControls/external/imgui -I/home/param/showMeTheControls/external/imgui/backends -I/home/param/showMeTheControls/external/implot -I/home/param/showMeTheControls/external/glfw/include -O3 -DNDEBUG -std=c++17 -o CMakeFiles/controllab.dir/src/designer/block_designer_ui.cpp.o -c /home/param/showMeTheControls/src/designer/block_designer_ui.cpp",
+  "file": "/home/param/showMeTheControls/src/designer/block_designer_ui.cpp",
+  "output": "CMakeFiles/controllab.dir/src/designer/block_designer_ui.cpp.o"
 },
 {
   "directory": "/home/param/showMeTheControls/build",
-  "command": "/usr/bin/c++  -I/home/param/showMeTheControls/src -I/home/param/showMeTheControls/external/eigen -I/home/param/showMeTheControls/external/imgui -I/home/param/showMeTheControls/external/imgui/backends -I/home/param/showMeTheControls/external/implot -I/home/param/showMeTheControls/external/glfw/include -O3 -DNDEBUG -std=c++17 -o CMakeFiles/controllab.dir/src/control/transfer_function.cpp.o -c /home/param/showMeTheControls/src/control/transfer_function.cpp",
-  "file": "/home/param/showMeTheControls/src/control/transfer_function.cpp",
-  "output": "CMakeFiles/controllab.dir/src/control/transfer_function.cpp.o"
+  "command": "/usr/bin/c++  -I/home/param/showMeTheControls/src -I/home/param/showMeTheControls/external/eigen -I/home/param/showMeTheControls/external/imgui -I/home/param/showMeTheControls/external/imgui/backends -I/home/param/showMeTheControls/external/implot -I/home/param/showMeTheControls/external/glfw/include -O3 -DNDEBUG -std=c++17 -o CMakeFiles/controllab.dir/src/designer/control_math.cpp.o -c /home/param/showMeTheControls/src/designer/control_math.cpp",
+  "file": "/home/param/showMeTheControls/src/designer/control_math.cpp",
+  "output": "CMakeFiles/controllab.dir/src/designer/control_math.cpp.o"
 },
 {
   "directory": "/home/param/showMeTheControls/build",
-  "command": "/usr/bin/c++  -I/home/param/showMeTheControls/src -I/home/param/showMeTheControls/external/eigen -I/home/param/showMeTheControls/external/imgui -I/home/param/showMeTheControls/external/imgui/backends -I/home/param/showMeTheControls/external/implot -I/home/param/showMeTheControls/external/glfw/include -O3 -DNDEBUG -std=c++17 -o CMakeFiles/controllab.dir/src/systems/second_order.cpp.o -c /home/param/showMeTheControls/src/systems/second_order.cpp",
-  "file": "/home/param/showMeTheControls/src/systems/second_order.cpp",
-  "output": "CMakeFiles/controllab.dir/src/systems/second_order.cpp.o"
+  "command": "/usr/bin/c++  -I/home/param/showMeTheControls/src -I/home/param/showMeTheControls/external/eigen -I/home/param/showMeTheControls/external/imgui -I/home/param/showMeTheControls/external/imgui/backends -I/home/param/showMeTheControls/external/implot -I/home/param/showMeTheControls/external/glfw/include -O3 -DNDEBUG -std=c++17 -o CMakeFiles/designer_tests.dir/tests/designer_tests.cpp.o -c /home/param/showMeTheControls/tests/designer_tests.cpp",
+  "file": "/home/param/showMeTheControls/tests/designer_tests.cpp",
+  "output": "CMakeFiles/designer_tests.dir/tests/designer_tests.cpp.o"
 },
 {
   "directory": "/home/param/showMeTheControls/build",
-  "command": "/usr/bin/c++  -I/home/param/showMeTheControls/src -I/home/param/showMeTheControls/external/eigen -I/home/param/showMeTheControls/external/imgui -I/home/param/showMeTheControls/external/imgui/backends -I/home/param/showMeTheControls/external/implot -I/home/param/showMeTheControls/external/glfw/include -O3 -DNDEBUG -std=c++17 -o CMakeFiles/controllab.dir/src/ui/pid_panel.cpp.o -c /home/param/showMeTheControls/src/ui/pid_panel.cpp",
-  "file": "/home/param/showMeTheControls/src/ui/pid_panel.cpp",
-  "output": "CMakeFiles/controllab.dir/src/ui/pid_panel.cpp.o"
+  "command": "/usr/bin/c++  -I/home/param/showMeTheControls/src -I/home/param/showMeTheControls/external/eigen -I/home/param/showMeTheControls/external/imgui -I/home/param/showMeTheControls/external/imgui/backends -I/home/param/showMeTheControls/external/implot -I/home/param/showMeTheControls/external/glfw/include -O3 -DNDEBUG -std=c++17 -o CMakeFiles/designer_tests.dir/src/designer/block_designer.cpp.o -c /home/param/showMeTheControls/src/designer/block_designer.cpp",
+  "file": "/home/param/showMeTheControls/src/designer/block_designer.cpp",
+  "output": "CMakeFiles/designer_tests.dir/src/designer/block_designer.cpp.o"
 },
 {
   "directory": "/home/param/showMeTheControls/build",
-  "command": "/usr/bin/c++  -I/home/param/showMeTheControls/src -I/home/param/showMeTheControls/external/eigen -I/home/param/showMeTheControls/external/imgui -I/home/param/showMeTheControls/external/imgui/backends -I/home/param/showMeTheControls/external/implot -I/home/param/showMeTheControls/external/glfw/include -O3 -DNDEBUG -std=c++17 -o CMakeFiles/controllab.dir/src/ui/state_space_panel.cpp.o -c /home/param/showMeTheControls/src/ui/state_space_panel.cpp",
-  "file": "/home/param/showMeTheControls/src/ui/state_space_panel.cpp",
-  "output": "CMakeFiles/controllab.dir/src/ui/state_space_panel.cpp.o"
+  "command": "/usr/bin/c++  -I/home/param/showMeTheControls/src -I/home/param/showMeTheControls/external/eigen -I/home/param/showMeTheControls/external/imgui -I/home/param/showMeTheControls/external/imgui/backends -I/home/param/showMeTheControls/external/implot -I/home/param/showMeTheControls/external/glfw/include -O3 -DNDEBUG -std=c++17 -o CMakeFiles/designer_tests.dir/src/designer/block_designer_ui.cpp.o -c /home/param/showMeTheControls/src/designer/block_designer_ui.cpp",
+  "file": "/home/param/showMeTheControls/src/designer/block_designer_ui.cpp",
+  "output": "CMakeFiles/designer_tests.dir/src/designer/block_designer_ui.cpp.o"
 },
 {
   "directory": "/home/param/showMeTheControls/build",
-  "command": "/usr/bin/c++  -I/home/param/showMeTheControls/src -I/home/param/showMeTheControls/external/eigen -I/home/param/showMeTheControls/external/imgui -I/home/param/showMeTheControls/external/imgui/backends -I/home/param/showMeTheControls/external/implot -I/home/param/showMeTheControls/external/glfw/include -O3 -DNDEBUG -std=c++17 -o CMakeFiles/controllab.dir/src/viz/zplane.cpp.o -c /home/param/showMeTheControls/src/viz/zplane.cpp",
-  "file": "/home/param/showMeTheControls/src/viz/zplane.cpp",
-  "output": "CMakeFiles/controllab.dir/src/viz/zplane.cpp.o"
+  "command": "/usr/bin/c++  -I/home/param/showMeTheControls/src -I/home/param/showMeTheControls/external/eigen -I/home/param/showMeTheControls/external/imgui -I/home/param/showMeTheControls/external/imgui/backends -I/home/param/showMeTheControls/external/implot -I/home/param/showMeTheControls/external/glfw/include -O3 -DNDEBUG -std=c++17 -o CMakeFiles/designer_tests.dir/src/designer/control_math.cpp.o -c /home/param/showMeTheControls/src/designer/control_math.cpp",
+  "file": "/home/param/showMeTheControls/src/designer/control_math.cpp",
+  "output": "CMakeFiles/designer_tests.dir/src/designer/control_math.cpp.o"
 },
 {
   "directory": "/home/param/showMeTheControls/build/external/glfw/src",

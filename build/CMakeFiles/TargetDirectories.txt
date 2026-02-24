@@ -1,5 +1,7 @@
 /home/param/showMeTheControls/build/CMakeFiles/imgui.dir
 /home/param/showMeTheControls/build/CMakeFiles/controllab.dir
+/home/param/showMeTheControls/build/CMakeFiles/designer_tests.dir
+/home/param/showMeTheControls/build/CMakeFiles/test.dir
 /home/param/showMeTheControls/build/CMakeFiles/edit_cache.dir
 /home/param/showMeTheControls/build/CMakeFiles/rebuild_cache.dir
 /home/param/showMeTheControls/build/CMakeFiles/list_install_components.dir
@@ -7,6 +9,7 @@
 /home/param/showMeTheControls/build/CMakeFiles/install/local.dir
 /home/param/showMeTheControls/build/CMakeFiles/install/strip.dir
 /home/param/showMeTheControls/build/external/glfw/CMakeFiles/uninstall.dir
+/home/param/showMeTheControls/build/external/glfw/CMakeFiles/test.dir
 /home/param/showMeTheControls/build/external/glfw/CMakeFiles/edit_cache.dir
 /home/param/showMeTheControls/build/external/glfw/CMakeFiles/rebuild_cache.dir
 /home/param/showMeTheControls/build/external/glfw/CMakeFiles/list_install_components.dir
@@ -15,6 +18,7 @@
 /home/param/showMeTheControls/build/external/glfw/CMakeFiles/install/strip.dir
 /home/param/showMeTheControls/build/external/glfw/src/CMakeFiles/glfw.dir
 /home/param/showMeTheControls/build/external/glfw/src/CMakeFiles/update_mappings.dir
+/home/param/showMeTheControls/build/external/glfw/src/CMakeFiles/test.dir
 /home/param/showMeTheControls/build/external/glfw/src/CMakeFiles/edit_cache.dir
 /home/param/showMeTheControls/build/external/glfw/src/CMakeFiles/rebuild_cache.dir
 /home/param/showMeTheControls/build/external/glfw/src/CMakeFiles/list_install_components.dir

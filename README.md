@@ -1,13 +1,15 @@
 # showMeTheControls
 
-Interactive digital control systems visualizer for learning:
+Interactive Simulink-style controller design sandbox.
 
-## Features to be implemented
-- Z-plane pole/zero placement
-- State-space analysis (controllability/observability)
-- Pole placement via Ackermann
-- State observer visualization
-- PID tuning with live plots
+## Current Features
+- Block canvas with drag/drop node layout
+- Block palette (Constant, Sum, Gain, Plant, Scope)
+- Wire creation (output pin -> input pin) and wire removal
+- Safe scheduling with direct-feedthrough-aware cycle checks
+- Time response plot from scope output
+- Graph-based model extraction for canonical negative-feedback loop
+- Real K-sweep closed-loop pole trajectory from extracted model
 
 ## Quick Start
 ```bash
@@ -16,3 +18,4 @@ mkdir build && cd build
 cmake .. -DCMAKE_BUILD_TYPE=Release
 cmake --build . -j$(nproc)
 ./controllab
+```
