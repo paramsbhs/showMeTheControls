@@ -50,19 +50,19 @@ const PRESETS = {
 function PresetCard({ preset, active, onLoad }) {
   return (
     <div style={{
-      background: active ? '#0f2a4a' : '#161b22',
-      border: `1px solid ${active ? '#4a90d9' : '#21262d'}`,
+      background: active ? '#2a2a2a' : '#222222',
+      border: `1px solid ${active ? '#cccccc' : '#2e2e2e'}`,
       borderRadius:8, padding:'8px 12px',
       display:'flex', alignItems:'flex-start', justifyContent:'space-between', gap:8,
     }}>
       <div style={{ flex:1, minWidth:0 }}>
-        <div style={{ color:'#e6edf3', fontSize:13, fontWeight:600 }}>{preset.name}</div>
-        <div style={{ color:'#6b7280', fontSize:11, marginTop:2 }}>{preset.desc}</div>
+        <div style={{ color:'#e0e0e0', fontSize:13, fontWeight:600 }}>{preset.name}</div>
+        <div style={{ color:'#999999', fontSize:11, marginTop:2 }}>{preset.desc}</div>
       </div>
       <button onClick={onLoad} style={{
-        flexShrink:0, background: active ? '#1d4ed8' : '#21262d',
-        border: `1px solid ${active ? '#4a90d9' : '#30363d'}`,
-        borderRadius:5, color:'#e6edf3', fontSize:11, padding:'4px 10px',
+        flexShrink:0, background: active ? '#2e2e2e' : '#2e2e2e',
+        border: `1px solid ${active ? '#cccccc' : '#383838'}`,
+        borderRadius:5, color:'#e0e0e0', fontSize:11, padding:'4px 10px',
         cursor:'pointer', marginTop:2,
       }}>{active ? '✓' : 'Load'}</button>
     </div>
@@ -88,16 +88,16 @@ export default function PresetGallery() {
         {['pid','lqr'].map(m => (
           <button key={m} onClick={() => { setMode(m); setActiveId(null) }} style={{
             flex:1, padding:'6px 0',
-            background: mode===m ? '#1d4ed8' : '#161b22',
-            border: `1px solid ${mode===m ? '#4a90d9' : '#30363d'}`,
-            borderRadius:6, color: mode===m ? '#fff' : '#6b7280',
+            background: mode===m ? '#2e2e2e' : '#222222',
+            border: `1px solid ${mode===m ? '#cccccc' : '#383838'}`,
+            borderRadius:6, color: mode===m ? '#fff' : '#999999',
             fontSize:12, fontWeight:700, cursor:'pointer', textTransform:'uppercase',
           }}>{m}</button>
         ))}
       </div>
 
       {modePresets.length === 0 ? (
-        <div style={{ color:'#4b5563', textAlign:'center', padding:'20px 0', fontSize:12 }}>
+        <div style={{ color:'#555555', textAlign:'center', padding:'20px 0', fontSize:12 }}>
           No presets for this combination.
         </div>
       ) : (
@@ -108,11 +108,11 @@ export default function PresetGallery() {
         </div>
       )}
 
-      <div style={{ color:'#374151', fontSize:11, textAlign:'center', paddingTop:4, borderTop:'1px solid #21262d' }}>
+      <div style={{ color:'#444444', fontSize:11, textAlign:'center', paddingTop:4, borderTop:'1px solid #2e2e2e' }}>
         Load a preset, then press <kbd style={kbd}>R</kbd> to simulate.
       </div>
     </div>
   )
 }
 
-const kbd = { background:'#161b22', border:'1px solid #30363d', borderRadius:4, padding:'1px 5px', fontFamily:'monospace', color:'#9ca3af', fontSize:10 }
+const kbd = { background:'#222222', border:'1px solid #383838', borderRadius:4, padding:'1px 5px', fontFamily:'monospace', color:'#aaaaaa', fontSize:10 }

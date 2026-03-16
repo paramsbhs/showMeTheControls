@@ -23,14 +23,14 @@ function Cart({ x, theta }) {
       {/* Rail */}
       <mesh position={[0, -0.06, 0]}>
         <boxGeometry args={[RAIL_LEN * 2, 0.06, 0.12]} />
-        <meshStandardMaterial color='#374151' metalness={0.6} roughness={0.4} />
+        <meshStandardMaterial color='#444444' metalness={0.6} roughness={0.4} />
       </mesh>
 
       {/* Cart body */}
       <group ref={cartRef} position={[x * X_SCALE, 0, 0]}>
         <mesh position={[0, 0.15, 0]}>
           <boxGeometry args={[0.45, 0.28, 0.3]} />
-          <meshStandardMaterial color='#1d4ed8' metalness={0.5} roughness={0.3} />
+          <meshStandardMaterial color='#2e2e2e' metalness={0.5} roughness={0.3} />
         </mesh>
         {/* Wheels */}
         {[-0.14, 0.14].map((wx, i) => (
@@ -47,7 +47,7 @@ function Cart({ x, theta }) {
         {/* Pole pivot point indicator */}
         <mesh position={[0, 0.3, 0]}>
           <sphereGeometry args={[0.04, 8, 8]} />
-          <meshStandardMaterial color='#9ca3af' metalness={0.8} />
+          <meshStandardMaterial color='#aaaaaa' metalness={0.8} />
         </mesh>
 
         {/* Pole (rotates around pivot) */}
@@ -55,7 +55,7 @@ function Cart({ x, theta }) {
           {/* Pole rod — origin at pivot, extends upward */}
           <mesh position={[0, POLE_LEN/2, 0]}>
             <cylinderGeometry args={[0.025, 0.025, POLE_LEN, 8]} />
-            <meshStandardMaterial color='#f59e0b' metalness={0.3} roughness={0.5} />
+            <meshStandardMaterial color='#c4a055' metalness={0.3} roughness={0.5} />
           </mesh>
           {/* Bob at tip */}
           <mesh position={[0, POLE_LEN, 0]}>
@@ -68,7 +68,7 @@ function Cart({ x, theta }) {
         {/* Upright target line (ghost) */}
         <mesh position={[0, POLE_LEN/2 + 0.3, 0]}>
           <cylinderGeometry args={[0.008, 0.008, POLE_LEN, 6]} />
-          <meshStandardMaterial color='#374151' transparent opacity={0.3} />
+          <meshStandardMaterial color='#444444' transparent opacity={0.3} />
         </mesh>
       </group>
     </group>
@@ -102,7 +102,7 @@ export default function PendulumScene({ points, playhead, followCam }) {
     <>
       <ambientLight intensity={0.5} />
       <directionalLight position={[5, 8, 4]} intensity={1.0} />
-      <pointLight position={[0, 4, 3]} intensity={0.4} color='#e0f0ff' />
+      <pointLight position={[0, 4, 3]} intensity={0.4} color='#cccccc' />
 
       <Cart x={x} theta={theta} />
       <FollowCamera cartX={x} enabled={followCam && points.length > 0} />
@@ -118,7 +118,7 @@ export default function PendulumScene({ points, playhead, followCam }) {
       {/* Floor */}
       <mesh rotation={[-Math.PI/2, 0, 0]} position={[0, -0.09, 0]}>
         <planeGeometry args={[12, 4]} />
-        <meshStandardMaterial color='#0d1117' roughness={0.9} />
+        <meshStandardMaterial color='#1a1a1a' roughness={0.9} />
       </mesh>
     </>
   )

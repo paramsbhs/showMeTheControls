@@ -7,17 +7,17 @@ import PendulumScene   from './vehicles/PendulumScene'
 const SCENE_CONFIG = {
   quadcopter: {
     camera:     { position: [4, 4, 4], fov: 50 },
-    background: 'linear-gradient(180deg, #0a0a1a 0%, #1a1a3e 100%)',
+    background: '#111111',
   },
   f1tenth: {
     // track radius=8m → need to see ~18m diameter; high angle overhead view
     camera:     { position: [0, 20, 8], fov: 65 },
-    background: 'linear-gradient(180deg, #030a03 0%, #0a1a0a 100%)',
+    background: '#111111',
   },
   pendulum: {
     // front view: cart travels ±2.5m, pole ~1.3m tall
     camera:     { position: [0, 1.5, 10], fov: 55 },
-    background: 'linear-gradient(180deg, #0a0a0a 0%, #0d1117 100%)',
+    background: '#111111',
   },
 }
 
@@ -46,14 +46,14 @@ function Hud({ vehicle, points, playhead, setpoint, targetSpeed }) {
   return (
     <div style={{
       position: 'absolute', top: 12, left: 12,
-      color: '#7ec8e3', fontFamily: 'monospace', fontSize: 12,
+      color: '#e0e0e0', fontFamily: 'monospace', fontSize: 12,
       background: 'rgba(0,0,0,0.55)', padding: '6px 10px', borderRadius: 6,
-      borderLeft: '2px solid #4a90d9', pointerEvents: 'none',
+      borderLeft: '2px solid #cccccc', pointerEvents: 'none',
     }}>
       {rows.map(({ label, value, accent, ok }) => (
         <div key={label}>
           {label}:{' '}
-          <span style={{ color: ok !== undefined ? (ok ? '#00ff88' : '#ffcc00') : accent ? '#ff6b35' : '#fff' }}>
+          <span style={{ color: ok !== undefined ? (ok ? '#5fa882' : '#ffcc00') : accent ? '#c4835a' : '#fff' }}>
             {value}
           </span>
         </div>
@@ -97,9 +97,9 @@ export default function SimCanvas() {
         title={followCam ? 'Switch to free camera' : 'Switch to follow camera'}
         style={{
           position: 'absolute', bottom: 12, right: 12,
-          background: followCam ? 'rgba(74,144,217,0.25)' : 'rgba(0,0,0,0.55)',
-          border: `1px solid ${followCam ? '#4a90d9' : '#30363d'}`,
-          borderRadius: 6, color: followCam ? '#4a90d9' : '#6b7280',
+          background: followCam ? 'rgba(80,80,80,0.35)' : 'rgba(0,0,0,0.55)',
+          border: `1px solid ${followCam ? '#cccccc' : '#383838'}`,
+          borderRadius: 6, color: followCam ? '#cccccc' : '#999999',
           fontSize: 11, fontWeight: 600, padding: '5px 10px',
           cursor: 'pointer', fontFamily: 'monospace',
         }}

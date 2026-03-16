@@ -34,12 +34,12 @@ function DroneModel({ altitude }) {
             <cylinderGeometry args={[0.07, 0.07, 0.06, 12]} />
             <meshStandardMaterial color='#333' metalness={0.8} roughness={0.2} />
           </mesh>
-          <RotorDisk color='#4a90d9' />
+          <RotorDisk color='#aaaaaa' />
         </group>
       ))}
       <mesh position={[0, -0.07, 0]}>
         <sphereGeometry args={[0.03, 8, 8]} />
-        <meshStandardMaterial color='#00ff88' emissive='#00ff88' emissiveIntensity={2} />
+        <meshStandardMaterial color='#5fa882' emissive='#5fa882' emissiveIntensity={2} />
       </mesh>
     </group>
   )
@@ -70,23 +70,23 @@ export default function QuadcopterScene({ points, playhead, setpoint, followCam 
     <>
       <ambientLight intensity={0.4} />
       <directionalLight position={[5, 10, 5]} intensity={1.2} />
-      <pointLight position={[-5, 5, -5]} intensity={0.5} color='#4a90d9' />
+      <pointLight position={[-5, 5, -5]} intensity={0.5} color='#aaaaaa' />
 
       <DroneModel altitude={alt} />
 
       {/* Setpoint ring */}
       <mesh position={[0, setpoint, 0]} rotation={[Math.PI/2, 0, 0]}>
         <ringGeometry args={[0.8, 0.9, 40]} />
-        <meshStandardMaterial color='#ff6b35' transparent opacity={0.6} side={2} />
+        <meshStandardMaterial color='#c4835a' transparent opacity={0.6} side={2} />
       </mesh>
 
       <mesh rotation={[-Math.PI/2, 0, 0]}>
         <planeGeometry args={[20, 20]} />
-        <meshStandardMaterial color='#0d1117' metalness={0.1} roughness={0.8} />
+        <meshStandardMaterial color='#1a1a1a' metalness={0.1} roughness={0.8} />
       </mesh>
 
       <Grid position={[0, 0.001, 0]} args={[20,20]} cellSize={1}
-        cellColor='#1e3a5f' sectionColor='#2d5986' fadeDistance={15} />
+        cellColor='#333333' sectionColor='#444444' fadeDistance={15} />
 
       <FollowCamera altitude={alt} enabled={followCam && points.length > 0} />
 

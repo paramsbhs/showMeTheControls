@@ -3,13 +3,13 @@ import { useSimStore } from '../store/useSimStore'
 
 function Tile({ label, value, unit, good, bad, format = v => v.toFixed(3) }) {
   const color = good !== undefined
-    ? (value <= good ? '#34d399' : value <= bad ? '#f59e0b' : '#f87171')
-    : '#e6edf3'
+    ? (value <= good ? '#5fa882' : value <= bad ? '#c4a055' : '#c47d7d')
+    : '#e0e0e0'
   return (
-    <div style={{ background:'#0d1117', border:'1px solid #21262d', borderRadius:8, padding:'9px 12px' }}>
-      <div style={{ color:'#6b7280', fontSize:10, textTransform:'uppercase', letterSpacing:'0.07em' }}>{label}</div>
+    <div style={{ background:'#1a1a1a', border:'1px solid #2e2e2e', borderRadius:8, padding:'9px 12px' }}>
+      <div style={{ color:'#999999', fontSize:10, textTransform:'uppercase', letterSpacing:'0.07em' }}>{label}</div>
       <div style={{ color, fontSize:19, fontFamily:'monospace', fontWeight:700, marginTop:2 }}>
-        {format(value)}<span style={{ fontSize:10, color:'#6b7280', marginLeft:3 }}>{unit}</span>
+        {format(value)}<span style={{ fontSize:10, color:'#999999', marginLeft:3 }}>{unit}</span>
       </div>
     </div>
   )
@@ -26,14 +26,14 @@ function score(m) {
 
 function ScoreBadge({ metrics }) {
   const s = score(metrics)
-  const color = s >= 80 ? '#34d399' : s >= 50 ? '#f59e0b' : '#f87171'
+  const color = s >= 80 ? '#5fa882' : s >= 50 ? '#c4a055' : '#c47d7d'
   return (
-    <div style={{ background:'#0d1117', border:`1px solid ${color}33`, borderRadius:8, padding:'9px 14px', display:'flex', alignItems:'center', justifyContent:'space-between' }}>
+    <div style={{ background:'#1a1a1a', border:`1px solid ${color}33`, borderRadius:8, padding:'9px 14px', display:'flex', alignItems:'center', justifyContent:'space-between' }}>
       <div>
-        <div style={{ color:'#9ca3af', fontSize:11 }}>Tuning Score</div>
+        <div style={{ color:'#aaaaaa', fontSize:11 }}>Tuning Score</div>
         <div style={{ color, fontSize:10, marginTop:1 }}>{s >= 80 ? 'Well tuned' : s >= 50 ? 'Acceptable' : 'Needs work'}</div>
       </div>
-      <span style={{ color, fontFamily:'monospace', fontSize:26, fontWeight:800 }}>{s}<span style={{ fontSize:11, color:'#6b7280' }}>/100</span></span>
+      <span style={{ color, fontFamily:'monospace', fontSize:26, fontWeight:800 }}>{s}<span style={{ fontSize:11, color:'#999999' }}>/100</span></span>
     </div>
   )
 }
@@ -44,15 +44,15 @@ function ExportBox({ code, lang }) {
   return (
     <div>
       <div style={{ display:'flex', justifyContent:'space-between', alignItems:'center', marginBottom:6 }}>
-        <span style={{ color:'#6b7280', fontSize:10, textTransform:'uppercase', letterSpacing:'0.07em' }}>Export ({lang})</span>
+        <span style={{ color:'#999999', fontSize:10, textTransform:'uppercase', letterSpacing:'0.07em' }}>Export ({lang})</span>
         <button onClick={copy} style={{
-          background: copied ? '#14532d' : '#21262d',
-          border: `1px solid ${copied ? '#16a34a' : '#30363d'}`,
-          borderRadius:4, color: copied ? '#4ade80' : '#9ca3af',
+          background: copied ? '#14532d' : '#2e2e2e',
+          border: `1px solid ${copied ? '#16a34a' : '#383838'}`,
+          borderRadius:4, color: copied ? '#4ade80' : '#aaaaaa',
           fontSize:11, padding:'2px 8px', cursor:'pointer', transition:'all 0.2s',
         }}>{copied ? '✓ Copied' : 'Copy'}</button>
       </div>
-      <pre style={{ background:'#010409', border:'1px solid #21262d', borderRadius:6, padding:'9px 12px', color:'#7ee787', fontSize:10, fontFamily:'monospace', margin:0, overflowX:'auto', whiteSpace:'pre' }}>
+      <pre style={{ background:'#111111', border:'1px solid #2e2e2e', borderRadius:6, padding:'9px 12px', color:'#7ee787', fontSize:10, fontFamily:'monospace', margin:0, overflowX:'auto', whiteSpace:'pre' }}>
         {code}
       </pre>
     </div>
@@ -144,14 +144,14 @@ export default function MetricsPanel() {
   const { metrics, vehicle, mode, gains } = s
 
   if (!metrics) return (
-    <div style={{ color:'#6b7280', textAlign:'center', paddingTop:40, fontSize:14 }}>No metrics yet — run a simulation.</div>
+    <div style={{ color:'#999999', textAlign:'center', paddingTop:40, fontSize:14 }}>No metrics yet — run a simulation.</div>
   )
 
   const { lang, code } = buildExport(vehicle, mode, { ...s, gains })
 
   return (
     <div style={{ display:'flex', flexDirection:'column', gap:12 }}>
-      <h3 style={{ color:'#4a90d9', fontSize:11, fontWeight:600, letterSpacing:'0.1em', textTransform:'uppercase', margin:0 }}>Performance</h3>
+      <h3 style={{ color:'#cccccc', fontSize:11, fontWeight:600, letterSpacing:'0.1em', textTransform:'uppercase', margin:0 }}>Performance</h3>
       {vehicle === 'quadcopter' && <QuadMetrics    m={metrics} />}
       {vehicle === 'f1tenth'    && <F1Metrics      m={metrics} />}
       {vehicle === 'pendulum'   && <PendulumMetrics m={metrics} />}

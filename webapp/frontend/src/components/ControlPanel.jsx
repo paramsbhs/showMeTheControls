@@ -5,8 +5,8 @@ import { useSimStore } from '../store/useSimStore'
 
 function Sec({ children, label }) {
   return (
-    <section style={{ padding: '13px 18px', borderBottom: '1px solid #21262d' }}>
-      {label && <h3 style={{ color: '#4a90d9', fontSize: 11, fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: 12 }}>{label}</h3>}
+    <section style={{ padding: '13px 18px', borderBottom: '1px solid #2e2e2e' }}>
+      {label && <h3 style={{ color: '#cccccc', fontSize: 11, fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: 12 }}>{label}</h3>}
       {children}
     </section>
   )
@@ -25,14 +25,14 @@ function Slider({ label, paramKey, min, max, step = 0.1, log = false }) {
   return (
     <div style={{ marginBottom: 13 }}>
       <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 3 }}>
-        <span style={{ color: '#9ca3af', fontSize: 12 }}>{label}</span>
-        <span style={{ color: '#e6edf3', fontFamily: 'monospace', fontSize: 12, fontWeight: 600 }}>{disp}</span>
+        <span style={{ color: '#aaaaaa', fontSize: 12 }}>{label}</span>
+        <span style={{ color: '#e0e0e0', fontFamily: 'monospace', fontSize: 12, fontWeight: 600 }}>{disp}</span>
       </div>
       <input type='range' min={toS(min)} max={toS(max)} step={log ? 0.01 : step}
         value={toS(val)}
         onChange={e => setParam(paramKey, fromS(parseFloat(e.target.value)))}
-        style={{ width: '100%', accentColor: '#4a90d9', cursor: 'pointer' }} />
-      <div style={{ display: 'flex', justifyContent: 'space-between', color: '#374151', fontSize: 10, marginTop: 1 }}>
+        style={{ width: '100%', accentColor: '#cccccc', cursor: 'pointer' }} />
+      <div style={{ display: 'flex', justifyContent: 'space-between', color: '#444444', fontSize: 10, marginTop: 1 }}>
         <span>{min}</span><span>{max}</span>
       </div>
     </div>
@@ -44,13 +44,13 @@ function NumInput({ label, paramKey, min, max, step = 0.5, unit }) {
   const setParam = useSimStore(s => s.setParam)
   return (
     <div style={{ marginBottom: 10 }}>
-      <label style={{ display: 'block', color: '#9ca3af', fontSize: 12, marginBottom: 4 }}>{label}</label>
+      <label style={{ display: 'block', color: '#aaaaaa', fontSize: 12, marginBottom: 4 }}>{label}</label>
       <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
         <input type='number' min={min} max={max} step={step} value={val}
           onChange={e => { const v = parseFloat(e.target.value); if (!isNaN(v)) setParam(paramKey, v) }}
-          style={{ flex: 1, background: '#010409', border: '1px solid #30363d', borderRadius: 6,
-            color: '#e6edf3', padding: '5px 10px', fontFamily: 'monospace', fontSize: 13 }} />
-        {unit && <span style={{ color: '#4b5563', fontSize: 12, width: 20 }}>{unit}</span>}
+          style={{ flex: 1, background: '#111111', border: '1px solid #383838', borderRadius: 6,
+            color: '#e0e0e0', padding: '5px 10px', fontFamily: 'monospace', fontSize: 13 }} />
+        {unit && <span style={{ color: '#555555', fontSize: 12, width: 20 }}>{unit}</span>}
       </div>
     </div>
   )
@@ -73,15 +73,15 @@ function VehicleSelector() {
         <button key={v.id} onClick={() => setVehicle(v.id)} style={{
           display: 'flex', alignItems: 'center', gap: 10,
           padding: '8px 12px',
-          background: vehicle === v.id ? '#0f2a4a' : '#161b22',
-          border: `1px solid ${vehicle === v.id ? '#4a90d9' : '#21262d'}`,
+          background: vehicle === v.id ? '#2a2a2a' : '#222222',
+          border: `1px solid ${vehicle === v.id ? '#cccccc' : '#2e2e2e'}`,
           borderRadius: 8, cursor: 'pointer', textAlign: 'left',
           transition: 'border-color 0.15s',
         }}>
           <span style={{ fontSize: 16 }}>{v.label.split(' ')[0]}</span>
           <div>
-            <div style={{ color: '#e6edf3', fontSize: 12, fontWeight: 600 }}>{v.label.split(' ').slice(1).join(' ')}</div>
-            <div style={{ color: '#6b7280', fontSize: 10 }}>{v.sub}</div>
+            <div style={{ color: '#e0e0e0', fontSize: 12, fontWeight: 600 }}>{v.label.split(' ').slice(1).join(' ')}</div>
+            <div style={{ color: '#999999', fontSize: 10 }}>{v.sub}</div>
           </div>
         </button>
       ))}
@@ -95,11 +95,11 @@ function ModeToggle() {
   const mode    = useSimStore(s => s.mode)
   const setMode = useSimStore(s => s.setMode)
   return (
-    <div style={{ display: 'flex', background: '#010409', border: '1px solid #30363d', borderRadius: 8, padding: 3, gap: 3 }}>
+    <div style={{ display: 'flex', background: '#111111', border: '1px solid #383838', borderRadius: 8, padding: 3, gap: 3 }}>
       {['pid', 'lqr'].map(m => (
         <button key={m} onClick={() => setMode(m)} style={{
-          flex: 1, padding: '7px 0', background: mode === m ? '#1d4ed8' : 'transparent',
-          border: 'none', borderRadius: 6, color: mode === m ? '#fff' : '#6b7280',
+          flex: 1, padding: '7px 0', background: mode === m ? '#2e2e2e' : 'transparent',
+          border: 'none', borderRadius: 6, color: mode === m ? '#fff' : '#999999',
           fontWeight: 700, fontSize: 13, cursor: 'pointer', textTransform: 'uppercase',
         }}>{m}</button>
       ))}
@@ -129,9 +129,9 @@ function QuadPanel({ mode }) {
       <NumInput label='Initial altitude' paramKey='initialZ' min={0} max={10} step={0.5} unit='m' />
       <NumInput label='Duration'         paramKey='duration'  min={2} max={30} step={1}   unit='s' />
       {gains && (
-        <div style={{ background:'#010409', border:'1px solid #21262d', borderRadius:6, padding:'8px 10px', marginTop:6 }}>
-          <div style={{ color:'#6b7280', fontSize:10, marginBottom:4 }}>K gains</div>
-          <div style={{ fontFamily:'monospace', fontSize:11, color:'#34d399' }}>
+        <div style={{ background:'#111111', border:'1px solid #2e2e2e', borderRadius:6, padding:'8px 10px', marginTop:6 }}>
+          <div style={{ color:'#999999', fontSize:10, marginBottom:4 }}>K gains</div>
+          <div style={{ fontFamily:'monospace', fontSize:11, color:'#5fa882' }}>
             [{gains.K[0].toFixed(4)}, {gains.K[1].toFixed(4)}]
           </div>
         </div>
@@ -145,11 +145,11 @@ function F1Panel({ mode }) {
   return (
     <>
       <NumInput label='Target speed' paramKey='f1TargetSpeed' min={0.5} max={7} step={0.5} unit='m/s' />
-      <div style={{ color:'#4a90d9', fontSize:10, fontWeight:600, letterSpacing:'0.08em', textTransform:'uppercase', margin:'10px 0 6px' }}>Speed PID</div>
+      <div style={{ color:'#cccccc', fontSize:10, fontWeight:600, letterSpacing:'0.08em', textTransform:'uppercase', margin:'10px 0 6px' }}>Speed PID</div>
       <Slider label='Kp_v' paramKey='f1KpV' min={0} max={8}   step={0.1} />
       <Slider label='Ki_v' paramKey='f1KiV' min={0} max={2}   step={0.05} />
       <Slider label='Kd_v' paramKey='f1KdV' min={0} max={1}   step={0.01} />
-      <div style={{ color:'#a78bfa', fontSize:10, fontWeight:600, letterSpacing:'0.08em', textTransform:'uppercase', margin:'10px 0 6px' }}>
+      <div style={{ color:'#9b8ec4', fontSize:10, fontWeight:600, letterSpacing:'0.08em', textTransform:'uppercase', margin:'10px 0 6px' }}>
         Lateral — {mode.toUpperCase()}
       </div>
       {mode === 'pid' ? (
@@ -164,9 +164,9 @@ function F1Panel({ mode }) {
           <Slider label='q2 — heading penalty'  paramKey='f1Q2L' min={0.1} max={50} step={0.1} />
           <Slider label='r  — steer effort'     paramKey='f1RL'  min={0.001} max={5} log />
           {gains && (
-            <div style={{ background:'#010409', border:'1px solid #21262d', borderRadius:6, padding:'8px 10px', marginTop:4 }}>
-              <div style={{ color:'#6b7280', fontSize:10, marginBottom:4 }}>Lateral K gains</div>
-              <div style={{ fontFamily:'monospace', fontSize:11, color:'#34d399' }}>
+            <div style={{ background:'#111111', border:'1px solid #2e2e2e', borderRadius:6, padding:'8px 10px', marginTop:4 }}>
+              <div style={{ color:'#999999', fontSize:10, marginBottom:4 }}>Lateral K gains</div>
+              <div style={{ fontFamily:'monospace', fontSize:11, color:'#5fa882' }}>
                 [{gains.K[0].toFixed(4)}, {gains.K[1].toFixed(4)}]
               </div>
             </div>
@@ -185,7 +185,7 @@ function PendulumPanel({ mode }) {
       <NumInput label='Initial angle θ₀' paramKey='pendTheta0' min={0.01} max={0.5} step={0.01} unit='rad' />
       {mode === 'pid' ? (
         <>
-          <div style={{ color:'#6b7280', fontSize:10, marginBottom:8 }}>
+          <div style={{ color:'#999999', fontSize:10, marginBottom:8 }}>
             PID on θ (angle). Needs high Kd for stability.
           </div>
           <Slider label='Kp' paramKey='pendKp' min={0} max={100} step={1} />
@@ -194,7 +194,7 @@ function PendulumPanel({ mode }) {
         </>
       ) : (
         <>
-          <div style={{ color:'#6b7280', fontSize:10, marginBottom:8 }}>
+          <div style={{ color:'#999999', fontSize:10, marginBottom:8 }}>
             LQR on [x, ẋ, θ, θ̇]. q3/q4 dominate — they penalise angle.
           </div>
           <Slider label='q1 — cart pos'     paramKey='pendQ1' min={0.1} max={50}  step={0.5} />
@@ -203,9 +203,9 @@ function PendulumPanel({ mode }) {
           <Slider label='q4 — pole ang-vel' paramKey='pendQ4' min={0.1} max={50}  step={0.5} />
           <Slider label='r  — force effort' paramKey='pendR'  min={0.001} max={1} log />
           {gains && (
-            <div style={{ background:'#010409', border:'1px solid #21262d', borderRadius:6, padding:'8px 10px', marginTop:4 }}>
-              <div style={{ color:'#6b7280', fontSize:10, marginBottom:4 }}>K gains [x, ẋ, θ, θ̇]</div>
-              <div style={{ fontFamily:'monospace', fontSize:11, color:'#34d399', lineHeight:1.6 }}>
+            <div style={{ background:'#111111', border:'1px solid #2e2e2e', borderRadius:6, padding:'8px 10px', marginTop:4 }}>
+              <div style={{ color:'#999999', fontSize:10, marginBottom:4 }}>K gains [x, ẋ, θ, θ̇]</div>
+              <div style={{ fontFamily:'monospace', fontSize:11, color:'#5fa882', lineHeight:1.6 }}>
                 {gains.K.map(k => k.toFixed(3)).join(', ')}
               </div>
             </div>
@@ -227,9 +227,9 @@ function Playback() {
   const Btn = ({ onClick, label, accent, title }) => (
     <button onClick={onClick} title={title} style={{
       flex: 1, padding: '7px 0',
-      background: accent ? '#1d4ed8' : '#161b22',
-      border: `1px solid ${accent ? '#4a90d9' : '#30363d'}`,
-      borderRadius: 6, color: '#e6edf3', fontSize: 15, cursor: 'pointer',
+      background: accent ? '#2e2e2e' : '#222222',
+      border: `1px solid ${accent ? '#cccccc' : '#383838'}`,
+      borderRadius: 6, color: '#e0e0e0', fontSize: 15, cursor: 'pointer',
     }}>{label}</button>
   )
   return (
@@ -240,13 +240,13 @@ function Playback() {
       </div>
       <input type='range' min={0} max={Math.max(0, points.length-1)} value={playhead}
         onChange={e => scrub(parseInt(e.target.value))} disabled={!points.length}
-        style={{ width:'100%', accentColor:'#4a90d9', marginBottom: 4 }} />
-      <div style={{ display:'flex', justifyContent:'space-between', color:'#4b5563', fontSize:10 }}>
+        style={{ width:'100%', accentColor:'#cccccc', marginBottom: 4 }} />
+      <div style={{ display:'flex', justifyContent:'space-between', color:'#555555', fontSize:10 }}>
         <span>{currentTime}s / {totalTime}s</span>
         <span>{progress.toFixed(0)}%</span>
       </div>
       {!points.length && (
-        <p style={{ color:'#374151', fontSize:11, marginTop:8, textAlign:'center' }}>
+        <p style={{ color:'#444444', fontSize:11, marginTop:8, textAlign:'center' }}>
           <kbd style={kbdStyle}>R</kbd> run · <kbd style={kbdStyle}>Space</kbd> play · <kbd style={kbdStyle}>←/→</kbd> scrub
         </p>
       )}
@@ -254,7 +254,7 @@ function Playback() {
   )
 }
 
-const kbdStyle = { background:'#161b22', border:'1px solid #30363d', borderRadius:4, padding:'1px 5px', fontFamily:'monospace', color:'#9ca3af', fontSize:10 }
+const kbdStyle = { background:'#222222', border:'1px solid #383838', borderRadius:4, padding:'1px 5px', fontFamily:'monospace', color:'#aaaaaa', fontSize:10 }
 
 // ─── Main ────────────────────────────────────────────────────────────────────
 
@@ -291,20 +291,19 @@ export default function ControlPanel() {
       <Sec>
         <button onClick={runSimulation} disabled={loading} style={{
           width:'100%', padding:'11px 0', marginBottom:8,
-          background: loading ? '#1a2032' : 'linear-gradient(135deg, #1d4ed8, #4a90d9)',
-          border: loading ? '1px solid #30363d' : 'none',
+          background: loading ? '#2a2a2a' : '#2a2a2a',
+          border: loading ? '1px solid #383838' : '1px solid #555555',
           borderRadius:8, color:'#fff', fontWeight:700, fontSize:14,
           cursor: loading ? 'wait' : 'pointer',
-          boxShadow: loading ? 'none' : '0 0 18px rgba(74,144,217,0.2)',
         }}>
           {loading ? 'Simulating…' : '▶  Run  (R)'}
         </button>
         <button onClick={handleShare} style={{
           width:'100%', padding:'7px 0', background:'none',
-          border:'1px solid #30363d', borderRadius:8,
-          color:'#6b7280', fontSize:12, cursor:'pointer',
+          border:'1px solid #383838', borderRadius:8,
+          color:'#999999', fontSize:12, cursor:'pointer',
         }}>🔗 Share this tuning</button>
-        {error && <p style={{ color:'#f87171', fontSize:11, marginTop:7 }}>{error}</p>}
+        {error && <p style={{ color:'#c47d7d', fontSize:11, marginTop:7 }}>{error}</p>}
       </Sec>
       <Sec label='Playback'><Playback /></Sec>
     </div>

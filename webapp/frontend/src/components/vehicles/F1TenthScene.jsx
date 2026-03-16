@@ -21,7 +21,7 @@ function TrackSurface() {
     <>
       <mesh rotation={[-Math.PI / 2, 0, 0]}>
         <ringGeometry args={[innerR, outerR, 120]} />
-        <meshStandardMaterial color='#1a2a1a' roughness={0.95} metalness={0.05} side={THREE.DoubleSide} />
+        <meshStandardMaterial color='#2a2a2a' roughness={0.95} metalness={0.05} side={THREE.DoubleSide} />
       </mesh>
       <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, 0.005, 0]}>
         <ringGeometry args={[outerR, outerR + 0.18, 120]} />
@@ -69,7 +69,7 @@ function Trail({ points, playhead }) {
 
   return (
     <points ref={ref} geometry={geometry}>
-      <pointsMaterial color='#ff6b35' size={0.1} transparent opacity={0.75} sizeAttenuation />
+      <pointsMaterial color='#c4835a' size={0.1} transparent opacity={0.75} sizeAttenuation />
     </points>
   )
 }
@@ -137,12 +137,12 @@ export default function F1TenthScene({ points, playhead, followCam }) {
     <>
       <ambientLight intensity={0.5} />
       <directionalLight position={[0, 20, 0]} intensity={1.0} castShadow />
-      <pointLight position={[0, 8, 0]} intensity={0.4} color='#e0f0ff' />
+      <pointLight position={[0, 8, 0]} intensity={0.4} color='#cccccc' />
 
       {/* Ground */}
       <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -0.01, 0]}>
         <planeGeometry args={[50, 50]} />
-        <meshStandardMaterial color='#0a1a0a' roughness={1} />
+        <meshStandardMaterial color='#111111' roughness={1} />
       </mesh>
 
       <TrackSurface />
@@ -152,7 +152,7 @@ export default function F1TenthScene({ points, playhead, followCam }) {
       <group ref={carRef} position={[initX, 0.12, -initY]} rotation={[0, initPsi, 0]}>
         <mesh position={[0, 0.06, 0]}>
           <boxGeometry args={[0.36, 0.1, 0.18]} />
-          <meshStandardMaterial color='#1d4ed8' metalness={0.5} roughness={0.3} />
+          <meshStandardMaterial color='#2e2e2e' metalness={0.5} roughness={0.3} />
         </mesh>
         <mesh position={[0.04, 0.12, 0]}>
           <boxGeometry args={[0.14, 0.06, 0.12]} />

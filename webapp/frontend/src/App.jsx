@@ -22,7 +22,7 @@ export default function App() {
   return (
     <div style={{
       display: 'flex', height: '100vh', width: '100vw',
-      background: '#010409', color: '#e6edf3',
+      background: '#111111', color: '#e0e0e0',
       fontFamily: '"Inter", system-ui, sans-serif',
       overflow: 'hidden',
     }}>
@@ -30,21 +30,21 @@ export default function App() {
       {/* Left sidebar */}
       <aside style={{
         width: SIDEBAR_W, flexShrink: 0,
-        background: '#0d1117',
-        borderRight: '1px solid #21262d',
+        background: '#1a1a1a',
+        borderRight: '1px solid #2e2e2e',
         display: 'flex', flexDirection: 'column',
         overflowY: 'auto',
       }}>
         <div style={{
           padding: '14px 20px',
-          borderBottom: '1px solid #21262d',
+          borderBottom: '1px solid #2e2e2e',
           display: 'flex', alignItems: 'center', gap: 10,
           flexShrink: 0,
         }}>
           <span style={{ fontSize: 18 }}>⚙</span>
           <div>
             <div style={{ fontWeight: 700, fontSize: 15, color: '#fff' }}>ControlLab</div>
-            <div style={{ fontSize: 10, color: '#6b7280' }}>Control Systems Playground</div>
+            <div style={{ fontSize: 10, color: '#999999' }}>Control Systems Playground</div>
           </div>
         </div>
         <ControlPanel />
@@ -58,7 +58,7 @@ export default function App() {
             display: 'flex', alignItems: 'center', justifyContent: 'center',
             background: 'rgba(1,4,9,0.75)', backdropFilter: 'blur(4px)',
           }}>
-            <div style={{ color: '#4a90d9', fontSize: 15, fontWeight: 600 }}>
+            <div style={{ color: '#cccccc', fontSize: 15, fontWeight: 600 }}>
               Simulating…
             </div>
           </div>
@@ -69,12 +69,12 @@ export default function App() {
       {/* Right panel */}
       <aside style={{
         width: RIGHT_W, flexShrink: 0,
-        background: '#0d1117',
-        borderLeft: '1px solid #21262d',
+        background: '#1a1a1a',
+        borderLeft: '1px solid #2e2e2e',
         display: 'flex', flexDirection: 'column',
       }}>
         {/* Tab bar */}
-        <div style={{ display: 'flex', borderBottom: '1px solid #21262d', flexShrink: 0 }}>
+        <div style={{ display: 'flex', borderBottom: '1px solid #2e2e2e', flexShrink: 0 }}>
           {RIGHT_TABS.map(({ id, label }) => (
             <button
               key={id}
@@ -82,8 +82,8 @@ export default function App() {
               style={{
                 flex: 1, padding: '11px 0',
                 background: 'none', border: 'none',
-                borderBottom: rightTab === id ? '2px solid #4a90d9' : '2px solid transparent',
-                color: rightTab === id ? '#4a90d9' : '#6b7280',
+                borderBottom: rightTab === id ? '2px solid #cccccc' : '2px solid transparent',
+                color: rightTab === id ? '#cccccc' : '#999999',
                 fontWeight: 600, fontSize: 12,
                 cursor: 'pointer',
                 transition: 'color 0.15s',
